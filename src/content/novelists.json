@@ -1,0 +1,182 @@
+[
+  {
+    "path": "novelists",
+    "title": "Emma's Character",
+    "author": "Jane Austen",
+    "content": "Emma Woodhouse, handsome, clever, and rich, with a comfortable home and happy disposition, seemed to unite some of the best blessings of existence.",
+    "difficulty_order": 1,
+    "word_count": 25,
+    "source": "Emma"
+  },
+  {
+    "path": "novelists",
+    "title": "Pride and Prejudice Opening",
+    "author": "Jane Austen",
+    "content": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood.",
+    "difficulty_order": 2,
+    "word_count": 39,
+    "source": "Pride and Prejudice"
+  },
+  {
+    "path": "novelists",
+    "title": "Happy Families",
+    "author": "Leo Tolstoy",
+    "content": "Happy families are all alike; every unhappy family is unhappy in its own way. Everything was in confusion in the Oblonskys' house. The wife had discovered that the husband was carrying on an intrigue with a French girl.",
+    "difficulty_order": 3,
+    "word_count": 37,
+    "source": "Anna Karenina"
+  },
+  {
+    "path": "novelists",
+    "title": "Huckleberry Finn Opening",
+    "author": "Mark Twain",
+    "content": "You don't know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain't no matter. That book was made by Mr. Mark Twain, and he told the truth, mainly.",
+    "difficulty_order": 4,
+    "word_count": 38,
+    "source": "Adventures of Huckleberry Finn"
+  },
+  {
+    "path": "novelists",
+    "title": "Moby Dick Opening Extended",
+    "author": "Herman Melville",
+    "content": "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+    "difficulty_order": 5,
+    "word_count": 42,
+    "source": "Moby-Dick"
+  },
+  {
+    "path": "novelists",
+    "title": "Two Cities Extended Opening",
+    "author": "Charles Dickens",
+    "content": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
+    "difficulty_order": 6,
+    "word_count": 54,
+    "source": "A Tale of Two Cities"
+  },
+  {
+    "path": "novelists",
+    "title": "Underground Man's Confession",
+    "author": "Fyodor Dostoevsky",
+    "content": "I am a sick man... I am a spiteful man. I am an unattractive man. I believe my liver is diseased. However, I know nothing at all about my disease, and do not know for certain what ails me. I don't consult a doctor for it, and never have.",
+    "difficulty_order": 7,
+    "word_count": 46,
+    "source": "Notes from Underground"
+  },
+  {
+    "path": "novelists",
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "content": "My father's family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and came to be called Pip. I give Pirrip as my father's family name, on the authority of his tombstone.",
+    "difficulty_order": 8,
+    "word_count": 51,
+    "source": "Great Expectations"
+  },
+  {
+    "path": "novelists",
+    "title": "White Whale Obsession",
+    "author": "Herman Melville",
+    "content": "The White Whale swam before him as the monomaniac incarnation of all those malicious agencies which some deep men feel eating in them, till they are left living on with half a heart and half a lung. That intangible malignity which has been from the beginning.",
+    "difficulty_order": 9,
+    "word_count": 45,
+    "source": "Moby-Dick"
+  },
+  {
+    "path": "novelists",
+    "title": "War and Peace Opening",
+    "author": "Leo Tolstoy",
+    "content": "Well, Prince, so Genoa and Lucca are now no more than family estates of the Buonapartes! But I warn you, if you don't tell me that this means war, if you still try to defend the infamies and horrors perpetrated by that Antichrist—I really believe he is Antichrist—I will have nothing more to do with you and you are no longer my friend, no longer my 'faithful slave,' as you call yourself!",
+    "difficulty_order": 10,
+    "word_count": 73,
+    "source": "War and Peace"
+  },
+  {
+    "path": "novelists",
+    "title": "Brothers Karamazov Truth",
+    "author": "Fyodor Dostoevsky",
+    "content": "Above all, don't lie to yourself. The man who lies to himself and listens to his own lie comes to a point that he cannot distinguish the truth within him, or around him, and so loses all respect for himself and for others. And having no respect he ceases to love, and in order to occupy and distract himself without love he gives way to passions and coarse pleasures.",
+    "difficulty_order": 11,
+    "word_count": 68,
+    "source": "The Brothers Karamazov"
+  },
+  {
+    "path": "novelists",
+    "title": "Persuasion Opening",
+    "author": "Jane Austen",
+    "content": "Sir Walter Elliot, of Kellynch Hall, in Somersetshire, was a man who, for his own amusement, never took up any book but the Baronetage; there he found occupation for an idle hour, and consolation in a distressed one; there his faculties were roused into admiration and respect, by contemplating the limited remnant of the earliest patents.",
+    "difficulty_order": 12,
+    "word_count": 61,
+    "source": "Persuasion"
+  },
+  {
+    "path": "novelists",
+    "title": "Twain on Human Nature",
+    "author": "Mark Twain",
+    "content": "The human race has only one really effective weapon, and that is laughter. Against the assault of laughter nothing can stand. You discover that the man you've worshiped is a hollow idol. You feel that you've been made a fool of. You feel that you've been living a lie. But you see that everybody else has been living the same lie.",
+    "difficulty_order": 13,
+    "word_count": 59,
+    "source": "Various Works"
+  },
+  {
+    "path": "novelists",
+    "title": "Ahab's Final Pursuit",
+    "author": "Herman Melville",
+    "content": "Towards thee I roll, thou all-destroying but unconquering whale; to the last I grapple with thee; from hell's heart I stab at thee; for hate's sake I spit my last breath at thee. Sink all coffins and all hearses to one common pool! and since neither can be mine, let me then tow to pieces, while still chasing thee, though tied to thee, thou damned whale!",
+    "difficulty_order": 14,
+    "word_count": 68,
+    "source": "Moby-Dick"
+  },
+  {
+    "path": "novelists",
+    "title": "Crime and Punishment Philosophy",
+    "author": "Fyodor Dostoevsky",
+    "content": "Pain and suffering are always inevitable for a large intelligence and a deep heart. The really great men must, I think, have great sadness on earth. I wanted to murder someone without casuistry, without sophistication, for my own sake alone! I wanted to find out then and there whether I was a louse like everybody else or a man. Whether I can step over barriers or not, whether I dare stoop to pick up or not, whether I am a trembling creature or whether I have the right!",
+    "difficulty_order": 15,
+    "word_count": 89,
+    "source": "Crime and Punishment"
+  },
+  {
+    "path": "novelists",
+    "title": "Bleak House London",
+    "author": "Charles Dickens",
+    "content": "London. Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall. Implacable November weather. As much mud in the streets as if the waters had but newly retired from the face of the earth, and it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill. Smoke lowering down from chimney-pots, making a soft black drizzle, with flakes of soot in it as big as full-grown snow-flakes—gone into mourning, one might imagine, for the death of the sun.",
+    "difficulty_order": 16,
+    "word_count": 106,
+    "source": "Bleak House"
+  },
+  {
+    "path": "novelists",
+    "title": "Pierre's Spiritual Journey",
+    "author": "Leo Tolstoy",
+    "content": "Pierre was right when he said that one must believe in the possibility of happiness in order to be happy, and I now believe in it. Let the dead bury the dead, but while I'm alive, I must live and be happy. Everything in me, everything in the world, everything in the universe, is striving toward one goal—perfection. And this goal can be achieved. This is the only thing I learned clearly, definitely, from all my suffering. I learned that there is a God, and that my soul is a part of that immense harmonious whole.",
+    "difficulty_order": 17,
+    "word_count": 102,
+    "source": "War and Peace"
+  },
+  {
+    "path": "novelists",
+    "title": "Mansfield Park Social Commentary",
+    "author": "Jane Austen",
+    "content": "About thirty years ago Miss Maria Ward, of Huntingdon, with only seven thousand pounds, had the good luck to captivate Sir Thomas Bertram, of Mansfield Park, in the county of Northampton, and to be thereby raised to the rank of a baronet's lady, with all the comforts and consequences of an handsome house and large income. All Huntingdon exclaimed on the greatness of the match, and her uncle, the lawyer, himself, allowed her to be at least three thousand pounds short of any equitable claim to it. She had two sisters to be benefited by her elevation; and such of their acquaintance as thought Miss Ward and Miss Frances quite as handsome as Miss Maria, did not scruple to predict their marrying with almost equal advantage.",
+    "difficulty_order": 18,
+    "word_count": 138,
+    "source": "Mansfield Park"
+  },
+  {
+    "path": "novelists",
+    "title": "Anna Karenina's Moral Universe",
+    "author": "Leo Tolstoy",
+    "content": "Vengeance is mine; I will repay. And for the first time Levin understood those words. He understood that it was not for men to judge. He understood that there was a law working above men's law—the law of love, the law of God; and that this law would take effect. He understood that if he were to pardon his wife's betrayer now it would not be because he was specially magnanimous, but because it was the natural outcome of the working of love. She had betrayed him and their child, but also she had suffered; and in her suffering lay her punishment. The greatest happiness possible for a man is to be able to look back on his life and be satisfied with it. And what makes a life satisfying? To live justly and with kindness toward others, to be grateful for what one has been given, and to work toward something larger than oneself.",
+    "difficulty_order": 19,
+    "word_count": 159,
+    "source": "Anna Karenina"
+  },
+  {
+    "path": "novelists",
+    "title": "The Grand Inquisitor",
+    "author": "Fyodor Dostoevsky",
+    "content": "For fifteen centuries we have been wrestling with Thy freedom, but now it is ended and over for good. Dost Thou not believe that it's over for good? Thou lookest meekly at me and deignest not even to be wroth with me. But let me tell Thee that now, today, people are more persuaded than ever that they have perfect freedom, yet they have brought their freedom to us and laid it humbly at our feet. But that has been our doing. Was this what Thou didst? Was this Thy freedom? For now, for the first time, it has become possible to think of the happiness of men. Man was created a rebel; and how can rebels be happy? Thou wast warned. Thou hast had no lack of admonitions and warnings, but Thou didst not listen to those warnings; Thou didst reject the only way by which men might be made happy. But, fortunately, departing Thou didst hand on the work to us. Thou hast promised, Thou hast established by Thy word, Thou hast given to us the right to bind and to unbind, and now, of course, Thou canst not think of taking it away.",
+    "difficulty_order": 20,
+    "word_count": 200,
+    "source": "The Brothers Karamazov"
+  }
+]

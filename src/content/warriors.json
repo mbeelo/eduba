@@ -1,0 +1,182 @@
+[
+  {
+    "path": "warriors",
+    "title": "Know Yourself",
+    "author": "Sun Tzu",
+    "content": "If you know the enemy and know yourself, you need not fear the result of a hundred battles.",
+    "difficulty_order": 1,
+    "word_count": 18,
+    "source": "The Art of War"
+  },
+  {
+    "path": "warriors",
+    "title": "I Came, I Saw, I Conquered",
+    "author": "Julius Caesar",
+    "content": "Veni, vidi, vici. I came, I saw, I conquered.",
+    "difficulty_order": 2,
+    "word_count": 9,
+    "source": "Commentarii de Bello Gallico"
+  },
+  {
+    "path": "warriors",
+    "title": "Five Rings",
+    "author": "Miyamoto Musashi",
+    "content": "The way of the warrior is to stop trouble before it starts.",
+    "difficulty_order": 3,
+    "word_count": 12,
+    "source": "The Book of Five Rings"
+  },
+  {
+    "path": "warriors",
+    "title": "Fortune and Virtue",
+    "author": "Niccolò Machiavelli",
+    "content": "It is better to be feared than loved, if you cannot be both.",
+    "difficulty_order": 4,
+    "word_count": 13,
+    "source": "The Prince"
+  },
+  {
+    "path": "warriors",
+    "title": "Peloponnesian War",
+    "author": "Thucydides",
+    "content": "The strong do what they can and the weak suffer what they must.",
+    "difficulty_order": 5,
+    "word_count": 13,
+    "source": "History of the Peloponnesian War"
+  },
+  {
+    "path": "warriors",
+    "title": "Supreme Excellence",
+    "author": "Sun Tzu",
+    "content": "Supreme excellence consists of breaking the enemy's resistance without fighting. All warfare is based on deception.",
+    "difficulty_order": 6,
+    "word_count": 17,
+    "source": "The Art of War"
+  },
+  {
+    "path": "warriors",
+    "title": "Die is Cast",
+    "author": "Julius Caesar",
+    "content": "The die is cast. Fortune, which has a great deal of power in other matters but especially in war, can bring about great changes in a situation through very slight forces.",
+    "difficulty_order": 7,
+    "word_count": 29,
+    "source": "Crossing the Rubicon"
+  },
+  {
+    "path": "warriors",
+    "title": "Way of Strategy",
+    "author": "Miyamoto Musashi",
+    "content": "You must understand that there is more than one path to the top of the mountain. A warrior should not say something faulty but should say nothing.",
+    "difficulty_order": 8,
+    "word_count": 26,
+    "source": "The Book of Five Rings"
+  },
+  {
+    "path": "warriors",
+    "title": "Lion and Fox",
+    "author": "Niccolò Machiavelli",
+    "content": "A prince must imitate the fox and the lion, for the lion cannot protect himself from traps, and the fox cannot defend himself from wolves.",
+    "difficulty_order": 9,
+    "word_count": 25,
+    "source": "The Prince"
+  },
+  {
+    "path": "warriors",
+    "title": "Human Nature",
+    "author": "Thucydides",
+    "content": "Human nature being what it is, people will always act according to their interests rather than according to law and justice.",
+    "difficulty_order": 10,
+    "word_count": 21,
+    "source": "History of the Peloponnesian War"
+  },
+  {
+    "path": "warriors",
+    "title": "Art of War Strategy",
+    "author": "Sun Tzu",
+    "content": "He who knows when to fight and when not to fight will be victorious. The supreme art of war is to subdue the enemy without fighting.",
+    "difficulty_order": 11,
+    "word_count": 25,
+    "source": "The Art of War"
+  },
+  {
+    "path": "warriors",
+    "title": "Gallic Wars",
+    "author": "Julius Caesar",
+    "content": "Men willingly believe what they wish. Experience is the teacher of all things. I love treason but hate a traitor. No one is so brave that he is not disturbed by something unexpected.",
+    "difficulty_order": 12,
+    "word_count": 30,
+    "source": "Various Quotes"
+  },
+  {
+    "path": "warriors",
+    "title": "Void and No-Thing",
+    "author": "Miyamoto Musashi",
+    "content": "In the void is virtue, and no evil. Wisdom has existence, principle has existence, the Way has existence, spirit is nothingness. From one thing, know ten thousand things. When you attack the enemy, your spirit must go to the heart of the enemy.",
+    "difficulty_order": 13,
+    "word_count": 40,
+    "source": "The Book of Five Rings"
+  },
+  {
+    "path": "warriors",
+    "title": "The Prince's Power",
+    "author": "Niccolò Machiavelli",
+    "content": "Since love and fear can hardly exist together, if we must choose between them, it is far safer to be feared than loved. Men judge generally more by the eye than by the hand, for everyone can see and few can feel.",
+    "difficulty_order": 14,
+    "word_count": 40,
+    "source": "The Prince"
+  },
+  {
+    "path": "warriors",
+    "title": "Melian Dialogue",
+    "author": "Thucydides",
+    "content": "Justice only exists between equals in power, while the strong do what they can and the weak suffer what they must. The secret to happiness is freedom. And the secret to freedom is courage.",
+    "difficulty_order": 15,
+    "word_count": 33,
+    "source": "History of the Peloponnesian War"
+  },
+  {
+    "path": "warriors",
+    "title": "Five Elements",
+    "author": "Sun Tzu",
+    "content": "Water shapes its course according to the nature of the ground over which it flows; the soldier works out his victory in relation to the foe whom he is facing. Therefore, just as water retains no constant shape, so in warfare there are no constant conditions.",
+    "difficulty_order": 16,
+    "word_count": 44,
+    "source": "The Art of War"
+  },
+  {
+    "path": "warriors",
+    "title": "Crossing the Rubicon",
+    "author": "Julius Caesar",
+    "content": "I had rather be first in a village than second in Rome. As a rule, men worry more about what they can't see than about what they can. It is not these well-fed long-haired men that I fear, but the pale and the hungry-looking, referring to Brutus and Cassius.",
+    "difficulty_order": 17,
+    "word_count": 48,
+    "source": "Various Quotes"
+  },
+  {
+    "path": "warriors",
+    "title": "Ground and Timing",
+    "author": "Miyamoto Musashi",
+    "content": "The important thing in strategy is to suppress the enemy's useful actions but allow his useless actions. You can only fight the way you practice. Think lightly of yourself and deeply of the world. Do not regret what you have done. Never let yourself be saddened by a separation. Resentment and complaint are appropriate neither for oneself nor others.",
+    "difficulty_order": 18,
+    "word_count": 59,
+    "source": "The Book of Five Rings"
+  },
+  {
+    "path": "warriors",
+    "title": "Effectual Truth",
+    "author": "Niccolò Machiavelli",
+    "content": "Since it is difficult to join them together, it is safer to be feared than to be loved when one of the two must be lacking. For it may be said of men in general that they are ungrateful, voluble, dissemblers, anxious to avoid danger, and covetous of gain; as long as you benefit them, they are entirely yours; they offer you their blood, their goods, their life, and their children when the necessity is remote; but when it approaches, they revolt.",
+    "difficulty_order": 19,
+    "word_count": 79,
+    "source": "The Prince"
+  },
+  {
+    "path": "warriors",
+    "title": "Funeral Oration",
+    "author": "Thucydides",
+    "content": "What you leave behind is not what is engraved in stone monuments, but what is woven into the lives of others. The secret of happiness is freedom, and the secret of freedom is courage. We must remember that one man is much the same as another, and that he is best who is trained in the severest school. For famous men have the whole earth as their memorial; it is not only the inscriptions on their graves in their own country that mark them out; no, in foreign lands also, not in any visible form but in people's hearts, their memory abides and grows.",
+    "difficulty_order": 20,
+    "word_count": 100,
+    "source": "Pericles' Funeral Oration"
+  }
+]

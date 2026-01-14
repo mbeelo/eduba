@@ -1,0 +1,182 @@
+[
+  {
+    "path": "scientists",
+    "title": "Pale Blue Dot",
+    "author": "Carl Sagan",
+    "content": "We are made of star stuff.",
+    "difficulty_order": 1,
+    "word_count": 6,
+    "source": "Cosmos"
+  },
+  {
+    "path": "scientists",
+    "title": "Shoulders of Giants",
+    "author": "Isaac Newton",
+    "content": "If I have seen further it is by standing on the shoulders of giants.",
+    "difficulty_order": 2,
+    "word_count": 13,
+    "source": "Letter to Robert Hooke"
+  },
+  {
+    "path": "scientists",
+    "title": "Curie's Discovery",
+    "author": "Marie Curie",
+    "content": "Nothing in life is to be feared, it is only to be understood.",
+    "difficulty_order": 3,
+    "word_count": 12,
+    "source": "Various Quotes"
+  },
+  {
+    "path": "scientists",
+    "title": "Eppur Si Muove",
+    "author": "Galileo Galilei",
+    "content": "And yet it moves. Mathematics is the language with which God has written the universe.",
+    "difficulty_order": 4,
+    "word_count": 15,
+    "source": "Trial and Il Saggiatore"
+  },
+  {
+    "path": "scientists",
+    "title": "Survival of the Fittest",
+    "author": "Charles Darwin",
+    "content": "It is not the strongest of the species that survives, but the most adaptable to change.",
+    "difficulty_order": 5,
+    "word_count": 16,
+    "source": "On the Origin of Species"
+  },
+  {
+    "path": "scientists",
+    "title": "God and Dice",
+    "author": "Albert Einstein",
+    "content": "God does not play dice with the universe. The important thing is not to stop questioning.",
+    "difficulty_order": 6,
+    "word_count": 16,
+    "source": "Various Quotes"
+  },
+  {
+    "path": "scientists",
+    "title": "Feynman's Method",
+    "author": "Richard Feynman",
+    "content": "I learned very early the difference between knowing the name of something and knowing something. Science is a way of thinking much more than it is a body of knowledge.",
+    "difficulty_order": 7,
+    "word_count": 30,
+    "source": "Various Lectures"
+  },
+  {
+    "path": "scientists",
+    "title": "Cosmic Perspective",
+    "author": "Carl Sagan",
+    "content": "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself. Every atom in your body came from a star that exploded.",
+    "difficulty_order": 8,
+    "word_count": 30,
+    "source": "Cosmos"
+  },
+  {
+    "path": "scientists",
+    "title": "Radioactive Research",
+    "author": "Marie Curie",
+    "content": "Science is the basis of our existence as thinking beings. It provides an objective reality that lies outside our individual hopes and fears. Nothing is more beautiful than the freedom to be curious and to wonder.",
+    "difficulty_order": 9,
+    "word_count": 33,
+    "source": "Various Writings"
+  },
+  {
+    "path": "scientists",
+    "title": "Natural Selection",
+    "author": "Charles Darwin",
+    "content": "In the long history of humankind, those who learned to collaborate and improvise most effectively have prevailed. The love for all living creatures is the most noble attribute of man. Nature will bear the closest inspection.",
+    "difficulty_order": 10,
+    "word_count": 33,
+    "source": "The Descent of Man"
+  },
+  {
+    "path": "scientists",
+    "title": "Imagination over Knowledge",
+    "author": "Albert Einstein",
+    "content": "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution. It is, strictly speaking, a real factor in scientific research.",
+    "difficulty_order": 11,
+    "word_count": 33,
+    "source": "On Cosmic Religion"
+  },
+  {
+    "path": "scientists",
+    "title": "Scientific Method",
+    "author": "Galileo Galilei",
+    "content": "All truths are easy to understand once they are discovered; the point is to discover them. Measure what can be measured, and make measurable what cannot be measured. In questions of science, the authority of a thousand is not worth the humble reasoning of a single individual.",
+    "difficulty_order": 12,
+    "word_count": 46,
+    "source": "Various Works"
+  },
+  {
+    "path": "scientists",
+    "title": "Principia Mathematica",
+    "author": "Isaac Newton",
+    "content": "I can calculate the motion of heavenly bodies but not the madness of people. To myself I am only a child playing on the beach, while vast oceans of truth lie undiscovered before me. Truth is ever to be found in simplicity, and not in the multiplicity and confusion of things.",
+    "difficulty_order": 13,
+    "word_count": 49,
+    "source": "Principia and Various Quotes"
+  },
+  {
+    "path": "scientists",
+    "title": "Pleasure of Finding Things Out",
+    "author": "Richard Feynman",
+    "content": "I wanted very much to learn to draw, for a reason that I kept to myself: I wanted to convey an emotion I have about the beauty of the world. It's difficult to describe because it's an emotion. It's analogous to the feeling one has in religion that has to do with a god that controls everything in the whole universe.",
+    "difficulty_order": 14,
+    "word_count": 58,
+    "source": "Surely You're Joking, Mr. Feynman!"
+  },
+  {
+    "path": "scientists",
+    "title": "Origin of Species",
+    "author": "Charles Darwin",
+    "content": "There is grandeur in this view of life, with its several powers, having been originally breathed into a few forms or into one; and that, whilst this planet has gone cycling on according to the fixed law of gravity, from so simple a beginning endless forms most beautiful and most wonderful have been, and are being, evolved.",
+    "difficulty_order": 15,
+    "word_count": 58,
+    "source": "On the Origin of Species"
+  },
+  {
+    "path": "scientists",
+    "title": "Demon-Haunted World",
+    "author": "Carl Sagan",
+    "content": "Science is not only compatible with spirituality; it is a profound source of spirituality. When we recognize our place in an immensity of light‐years and in the passage of ages, when we grasp the intricacy, beauty, and subtlety of life, then that soaring feeling, that sense of elation and humility combined, is surely spiritual.",
+    "difficulty_order": 16,
+    "word_count": 57,
+    "source": "The Demon-Haunted World"
+  },
+  {
+    "path": "scientists",
+    "title": "Relativity",
+    "author": "Albert Einstein",
+    "content": "A human being is part of the whole called by us universe, a part limited in time and space. We experience ourselves, our thoughts and feelings as something separate from the rest. A kind of optical delusion of consciousness. This delusion is a kind of prison for us, restricting us to our personal desires and to affection for a few persons nearest to us.",
+    "difficulty_order": 17,
+    "word_count": 62,
+    "source": "Letter to Norman Salit"
+  },
+  {
+    "path": "scientists",
+    "title": "Laboratory Life",
+    "author": "Marie Curie",
+    "content": "I am among those who think that science has great beauty. A scientist in his laboratory is not only a technician: he is also a child placed before natural phenomena which impress him like a fairy tale. We should not allow it to be believed that all scientific progress can be reduced to mechanisms, machines, gearings, even though such machinery has its own beauty.",
+    "difficulty_order": 18,
+    "word_count": 60,
+    "source": "Pierre Curie"
+  },
+  {
+    "path": "scientists",
+    "title": "Teaching Physics",
+    "author": "Richard Feynman",
+    "content": "I think it's much more interesting to live not knowing than to have answers which might be wrong. I have approximate answers and possible beliefs and different degrees of uncertainty about different things, but I am not absolutely sure of anything and there are many things I don't know anything about, such as whether it means anything to ask why we're here.",
+    "difficulty_order": 19,
+    "word_count": 62,
+    "source": "The Pleasure of Finding Things Out"
+  },
+  {
+    "path": "scientists",
+    "title": "Dialogue Concerning Two Chief World Systems",
+    "author": "Galileo Galilei",
+    "content": "I do not feel obliged to believe that the same God who has endowed us with sense, reason, and intellect has intended us to forgo their use and by some other means to give us knowledge which we can attain by them. He would not require us to deny sense and reason in physical matters which are set before our eyes and minds by direct experience or necessary demonstrations.",
+    "difficulty_order": 20,
+    "word_count": 66,
+    "source": "Letter to the Grand Duchess Christina"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "path": "philosophers",
+    "title": "The Unexamined Life",
+    "author": "Plato",
+    "content": "The unexamined life is not worth living.",
+    "difficulty_order": 1,
+    "word_count": 8,
+    "source": "Apology"
+  },
+  {
+    "path": "philosophers",
+    "title": "Knowledge and Ignorance",
+    "author": "Plato",
+    "content": "I know that I know nothing.",
+    "difficulty_order": 2,
+    "word_count": 6,
+    "source": "Apology"
+  },
+  {
+    "path": "philosophers",
+    "title": "Excellence as Habit",
+    "author": "Aristotle",
+    "content": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    "difficulty_order": 3,
+    "word_count": 15,
+    "source": "Nicomachean Ethics"
+  },
+  {
+    "path": "philosophers",
+    "title": "Self-Reliance",
+    "author": "Ralph Waldo Emerson",
+    "content": "Trust thyself: every heart vibrates to that iron string.",
+    "difficulty_order": 4,
+    "word_count": 10,
+    "source": "Self-Reliance"
+  },
+  {
+    "path": "philosophers",
+    "title": "Natural Living",
+    "author": "Henry David Thoreau",
+    "content": "In wildness is the preservation of the world.",
+    "difficulty_order": 5,
+    "word_count": 8,
+    "source": "Walking"
+  },
+  {
+    "path": "philosophers",
+    "title": "Strength Through Suffering",
+    "author": "Friedrich Nietzsche",
+    "content": "What does not kill me makes me stronger.",
+    "difficulty_order": 6,
+    "word_count": 8,
+    "source": "Twilight of the Idols"
+  },
+  {
+    "path": "philosophers",
+    "title": "Essays on Life",
+    "author": "Michel de Montaigne",
+    "content": "Nothing is so firmly believed as what we least know.",
+    "difficulty_order": 7,
+    "word_count": 10,
+    "source": "Essays"
+  },
+  {
+    "path": "philosophers",
+    "title": "Deliberate Living",
+    "author": "Henry David Thoreau",
+    "content": "I went to the woods to live deliberately, to front only the essential facts of life.",
+    "difficulty_order": 8,
+    "word_count": 16,
+    "source": "Walden"
+  },
+  {
+    "path": "philosophers",
+    "title": "Individual Genius",
+    "author": "Ralph Waldo Emerson",
+    "content": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    "difficulty_order": 9,
+    "word_count": 18,
+    "source": "Self-Reliance"
+  },
+  {
+    "path": "philosophers",
+    "title": "Golden Mean",
+    "author": "Aristotle",
+    "content": "Moral excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
+    "difficulty_order": 10,
+    "word_count": 24,
+    "source": "Nicomachean Ethics"
+  },
+  {
+    "path": "philosophers",
+    "title": "Eternal Return",
+    "author": "Friedrich Nietzsche",
+    "content": "What if some day or night a demon were to steal into your loneliest loneliness and say to you: This life as you now live it you must live once again and innumerable times again.",
+    "difficulty_order": 11,
+    "word_count": 33,
+    "source": "The Gay Science"
+  },
+  {
+    "path": "philosophers",
+    "title": "The Cave Allegory",
+    "author": "Plato",
+    "content": "And now, I said, let me show in a figure how far our nature is enlightened or unenlightened. Behold! human beings living in an underground den, which has a mouth open towards the light.",
+    "difficulty_order": 12,
+    "word_count": 32,
+    "source": "The Republic"
+  },
+  {
+    "path": "philosophers",
+    "title": "Simple Truths",
+    "author": "Henry David Thoreau",
+    "content": "The mass of men lead lives of quiet desperation. What is called resignation is confirmed desperation. From the desperate city you go into the desperate country, and have to console yourself with the bravery of minks and muskrats.",
+    "difficulty_order": 13,
+    "word_count": 38,
+    "source": "Walden"
+  },
+  {
+    "path": "philosophers",
+    "title": "Human Understanding",
+    "author": "Michel de Montaigne",
+    "content": "Man is certainly stark mad; he cannot make a worm, and yet he will be making gods by dozens. We are all patchwork, and so shapeless and diverse in composition that each bit, each moment, plays its own game.",
+    "difficulty_order": 14,
+    "word_count": 38,
+    "source": "Essays"
+  },
+  {
+    "path": "philosophers",
+    "title": "Nature's Lessons",
+    "author": "Ralph Waldo Emerson",
+    "content": "Nature is not fixed but fluid. Spirit alters, moulds, makes it. The immobility or bruteness of nature is the absence of spirit; to pure spirit it is fluid, it is volatile, it is obedient.",
+    "difficulty_order": 15,
+    "word_count": 33,
+    "source": "Nature"
+  },
+  {
+    "path": "philosophers",
+    "title": "God is Dead",
+    "author": "Friedrich Nietzsche",
+    "content": "God is dead. God remains dead. And we have killed him. How shall we comfort ourselves, the murderers of all murderers? What was holiest and mightiest of all that the world has yet owned has bled to death under our knives.",
+    "difficulty_order": 16,
+    "word_count": 42,
+    "source": "The Gay Science"
+  },
+  {
+    "path": "philosophers",
+    "title": "Philosopher King",
+    "author": "Plato",
+    "content": "Until philosophers are kings, or the kings and princes of this world have the spirit and power of philosophy, and political greatness and wisdom meet in one, and those commoner natures who pursue either to the exclusion of the other are compelled to stand aside, cities will never have rest from their evils.",
+    "difficulty_order": 17,
+    "word_count": 54,
+    "source": "The Republic"
+  },
+  {
+    "path": "philosophers",
+    "title": "Human Flourishing",
+    "author": "Aristotle",
+    "content": "Happiness is not a feeling but a way of being. Happiness is the meaning and the purpose of life, the whole aim and end of human existence. It consists in activity of soul in accordance with virtue, and if there are more than one virtue, in accordance with the best and most complete.",
+    "difficulty_order": 18,
+    "word_count": 50,
+    "source": "Nicomachean Ethics"
+  },
+  {
+    "path": "philosophers",
+    "title": "Conformity's Danger",
+    "author": "Ralph Waldo Emerson",
+    "content": "A foolish consistency is the hobgoblin of little minds, adored by little statesmen and philosophers and divines. With consistency a great soul has simply nothing to do. He may as well concern himself with his shadow on the wall. Speak what you think now in hard words, and to-morrow speak what to-morrow thinks in hard words again, though it contradict every thing you said to-day.",
+    "difficulty_order": 19,
+    "word_count": 69,
+    "source": "Self-Reliance"
+  },
+  {
+    "path": "philosophers",
+    "title": "Life's Meaning",
+    "author": "Michel de Montaigne",
+    "content": "The value of life lies not in the length of days, but in the use we make of them; a man may live long yet live very little. Whether you find satisfaction in life depends not on your tale of years, but on your will. I have lived long enough; my life has been full and complete. Others may write the sequel, for that part belongs to fortune, not to me. Death finds me prepared.",
+    "difficulty_order": 20,
+    "word_count": 75,
+    "source": "Essays"
+  }
+]

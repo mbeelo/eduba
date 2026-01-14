@@ -1,0 +1,182 @@
+[
+  {
+    "path": "poets",
+    "title": "Poetry's Purpose",
+    "author": "Emily Dickinson",
+    "content": "I dwell in possibility.",
+    "difficulty_order": 1,
+    "word_count": 4,
+    "source": "Poem 657"
+  },
+  {
+    "path": "poets",
+    "title": "Darkness Visible",
+    "author": "John Milton",
+    "content": "The mind is its own place.",
+    "difficulty_order": 2,
+    "word_count": 6,
+    "source": "Paradise Lost"
+  },
+  {
+    "path": "poets",
+    "title": "The Road Less Traveled",
+    "author": "Robert Frost",
+    "content": "Two roads diverged in a yellow wood.",
+    "difficulty_order": 3,
+    "word_count": 8,
+    "source": "The Road Not Taken"
+  },
+  {
+    "path": "poets",
+    "title": "Hope and Feathers",
+    "author": "Emily Dickinson",
+    "content": "Hope is the thing with feathers that perches in the soul.",
+    "difficulty_order": 4,
+    "word_count": 12,
+    "source": "Hope is the thing with feathers"
+  },
+  {
+    "path": "poets",
+    "title": "Nature's First Green",
+    "author": "Robert Frost",
+    "content": "Nature's first green is gold, her hardest hue to hold.",
+    "difficulty_order": 5,
+    "word_count": 11,
+    "source": "Nothing Gold Can Stay"
+  },
+  {
+    "path": "poets",
+    "title": "Death and the Maiden",
+    "author": "Emily Dickinson",
+    "content": "Because I could not stop for Death, he kindly stopped for me.",
+    "difficulty_order": 6,
+    "word_count": 13,
+    "source": "Because I could not stop for Death"
+  },
+  {
+    "path": "poets",
+    "title": "The Human Condition",
+    "author": "William Shakespeare",
+    "content": "All the world's a stage, and all the men and women merely players.",
+    "difficulty_order": 7,
+    "word_count": 13,
+    "source": "As You Like It"
+  },
+  {
+    "path": "poets",
+    "title": "Mortality's Shadow",
+    "author": "William Shakespeare",
+    "content": "To be or not to be, that is the question whether 'tis nobler.",
+    "difficulty_order": 8,
+    "word_count": 13,
+    "source": "Hamlet"
+  },
+  {
+    "path": "poets",
+    "title": "Time's Passage",
+    "author": "Andrew Marvell",
+    "content": "Had we but world enough and time, this coyness, lady, were no crime.",
+    "difficulty_order": 9,
+    "word_count": 14,
+    "source": "To His Coy Mistress"
+  },
+  {
+    "path": "poets",
+    "title": "Love's Philosophy",
+    "author": "Percy Bysshe Shelley",
+    "content": "The fountains mingle with the river, and the rivers with the ocean.",
+    "difficulty_order": 10,
+    "word_count": 12,
+    "source": "Love's Philosophy"
+  },
+  {
+    "path": "poets",
+    "title": "Ozymandias",
+    "author": "Percy Bysshe Shelley",
+    "content": "Look on my works, ye mighty, and despair! Nothing beside remains around the decay.",
+    "difficulty_order": 11,
+    "word_count": 15,
+    "source": "Ozymandias"
+  },
+  {
+    "path": "poets",
+    "title": "The Tiger's Fire",
+    "author": "William Blake",
+    "content": "Tiger, tiger, burning bright in the forests of the night, what immortal hand or eye could frame thy fearful symmetry?",
+    "difficulty_order": 12,
+    "word_count": 21,
+    "source": "The Tyger"
+  },
+  {
+    "path": "poets",
+    "title": "Daffodils Dancing",
+    "author": "William Wordsworth",
+    "content": "I wandered lonely as a cloud that floats on high o'er vales and hills, when all at once I saw a crowd, a host of golden daffodils.",
+    "difficulty_order": 13,
+    "word_count": 26,
+    "source": "I Wandered Lonely as a Cloud"
+  },
+  {
+    "path": "poets",
+    "title": "The Raven's Call",
+    "author": "Edgar Allan Poe",
+    "content": "Once upon a midnight dreary, while I pondered, weak and weary, over many a quaint and curious volume of forgotten lore, while I nodded, nearly napping, suddenly there came a tapping.",
+    "difficulty_order": 14,
+    "word_count": 32,
+    "source": "The Raven"
+  },
+  {
+    "path": "poets",
+    "title": "Autumn's Glory",
+    "author": "John Keats",
+    "content": "Season of mists and mellow fruitfulness, close bosom-friend of the maturing sun; conspiring with him how to load and bless with fruit the vines that round the thatch-eaves run.",
+    "difficulty_order": 15,
+    "word_count": 29,
+    "source": "To Autumn"
+  },
+  {
+    "path": "poets",
+    "title": "Dover Beach",
+    "author": "Matthew Arnold",
+    "content": "The sea is calm tonight. The tide is full, the moon lies fair upon the straits; on the French coast the light gleams and is gone; the cliffs of England stand, glimmering and vast, out in the tranquil bay.",
+    "difficulty_order": 16,
+    "word_count": 36,
+    "source": "Dover Beach"
+  },
+  {
+    "path": "poets",
+    "title": "Ulysses' Journey",
+    "author": "Alfred Lord Tennyson",
+    "content": "It little profits that an idle king, by this still hearth, among these barren crags, matched with an aged wife, I mete and dole unequal laws unto a savage race, that hoard, and sleep, and feed, and know not me.",
+    "difficulty_order": 17,
+    "word_count": 38,
+    "source": "Ulysses"
+  },
+  {
+    "path": "poets",
+    "title": "Paradise Lost",
+    "author": "John Milton",
+    "content": "The mind is its own place, and in itself can make a heaven of hell, a hell of heaven. What matter where, if I be still the same, and what I should be, all but less than he whom thunder hath made greater?",
+    "difficulty_order": 18,
+    "word_count": 40,
+    "source": "Paradise Lost"
+  },
+  {
+    "path": "poets",
+    "title": "The Waste Land",
+    "author": "T.S. Eliot",
+    "content": "April is the cruellest month, breeding lilacs out of the dead land, mixing memory and desire, stirring dull roots with spring rain. Winter kept us warm, covering earth in forgetful snow, feeding a little life with dried tubers.",
+    "difficulty_order": 19,
+    "word_count": 38,
+    "source": "The Waste Land"
+  },
+  {
+    "path": "poets",
+    "title": "Do Not Go Gentle",
+    "author": "Dylan Thomas",
+    "content": "Do not go gentle into that good night, old age should burn and rave at close of day; rage, rage against the dying of the light. Though wise men at their end know dark is right, because their words had forked no lightning they do not go gentle into that good night.",
+    "difficulty_order": 20,
+    "word_count": 48,
+    "source": "Do Not Go Gentle Into That Good Night"
+  }
+]

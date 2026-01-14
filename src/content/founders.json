@@ -1,0 +1,182 @@
+[
+  {
+    "path": "founders",
+    "title": "Life and Liberty",
+    "author": "Constitution",
+    "content": "Life, liberty, and the pursuit of happiness.",
+    "difficulty_order": 1,
+    "word_count": 7,
+    "source": "Declaration of Independence"
+  },
+  {
+    "path": "founders",
+    "title": "We the People",
+    "author": "Constitution",
+    "content": "We the People of the United States.",
+    "difficulty_order": 2,
+    "word_count": 7,
+    "source": "Constitution Preamble"
+  },
+  {
+    "path": "founders",
+    "title": "Self Evident Truths",
+    "author": "Thomas Jefferson",
+    "content": "We hold these truths to be self-evident.",
+    "difficulty_order": 3,
+    "word_count": 8,
+    "source": "Declaration of Independence"
+  },
+  {
+    "path": "founders",
+    "title": "Government by Consent",
+    "author": "Thomas Jefferson",
+    "content": "Governments derive their just powers from the consent of the governed.",
+    "difficulty_order": 4,
+    "word_count": 11,
+    "source": "Declaration of Independence"
+  },
+  {
+    "path": "founders",
+    "title": "Price of Liberty",
+    "author": "Patrick Henry",
+    "content": "The price of liberty is eternal vigilance.",
+    "difficulty_order": 5,
+    "word_count": 7,
+    "source": "Give Me Liberty Speech"
+  },
+  {
+    "path": "founders",
+    "title": "More Perfect Union",
+    "author": "Constitution",
+    "content": "In order to form a more perfect union.",
+    "difficulty_order": 6,
+    "word_count": 8,
+    "source": "Constitution Preamble"
+  },
+  {
+    "path": "founders",
+    "title": "Justice and Equality",
+    "author": "Constitution",
+    "content": "Establish justice, insure domestic tranquility, provide for the common defense, promote the general welfare.",
+    "difficulty_order": 7,
+    "word_count": 15,
+    "source": "Constitution Preamble"
+  },
+  {
+    "path": "founders",
+    "title": "Eternal Vigilance",
+    "author": "Thomas Jefferson",
+    "content": "The tree of liberty must be refreshed from time to time with the blood of patriots.",
+    "difficulty_order": 8,
+    "word_count": 16,
+    "source": "Letter to William Stephens Smith"
+  },
+  {
+    "path": "founders",
+    "title": "United We Stand",
+    "author": "Aesop / Benjamin Franklin",
+    "content": "United we stand, divided we fall. A house divided against itself cannot stand long.",
+    "difficulty_order": 9,
+    "word_count": 15,
+    "source": "Poor Richard's Almanack"
+  },
+  {
+    "path": "founders",
+    "title": "Give Me Liberty",
+    "author": "Patrick Henry",
+    "content": "Give me liberty, or give me death! I know not what course others may take, but as for me.",
+    "difficulty_order": 10,
+    "word_count": 19,
+    "source": "Give Me Liberty Speech"
+  },
+  {
+    "path": "founders",
+    "title": "Four Score and Seven",
+    "author": "Abraham Lincoln",
+    "content": "Four score and seven years ago our fathers brought forth on this continent a new nation.",
+    "difficulty_order": 11,
+    "word_count": 16,
+    "source": "Gettysburg Address"
+  },
+  {
+    "path": "founders",
+    "title": "Equal Creation",
+    "author": "Thomas Jefferson",
+    "content": "All men are created equal, that they are endowed by their Creator with certain unalienable rights.",
+    "difficulty_order": 12,
+    "word_count": 17,
+    "source": "Declaration of Independence"
+  },
+  {
+    "path": "founders",
+    "title": "Conceived in Liberty",
+    "author": "Abraham Lincoln",
+    "content": "Conceived in liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war.",
+    "difficulty_order": 13,
+    "word_count": 22,
+    "source": "Gettysburg Address"
+  },
+  {
+    "path": "founders",
+    "title": "Prudence and Experience",
+    "author": "Thomas Jefferson",
+    "content": "Prudence, indeed, will dictate that governments long established should not be changed for light and transient causes; and accordingly all experience hath shown that mankind are more disposed to suffer.",
+    "difficulty_order": 14,
+    "word_count": 31,
+    "source": "Declaration of Independence"
+  },
+  {
+    "path": "founders",
+    "title": "Revolutionary Right",
+    "author": "Thomas Jefferson",
+    "content": "But when a long train of abuses and usurpations, pursuing invariably the same object evinces a design to reduce them under absolute despotism, it is their right, it is their duty, to throw off such government.",
+    "difficulty_order": 15,
+    "word_count": 35,
+    "source": "Declaration of Independence"
+  },
+  {
+    "path": "founders",
+    "title": "Farewell Warning",
+    "author": "George Washington",
+    "content": "The unity of government which constitutes you one people is also now dear to you. It is justly so, for it is a main pillar in the edifice of your real independence, the support of your tranquility at home, your peace abroad.",
+    "difficulty_order": 16,
+    "word_count": 40,
+    "source": "Farewell Address"
+  },
+  {
+    "path": "founders",
+    "title": "Public Education",
+    "author": "Thomas Jefferson",
+    "content": "If a nation expects to be ignorant and free, in a state of civilization, it expects what never was and never will be. The functionaries of every government have propensities to command at will the liberty and property of their constituents.",
+    "difficulty_order": 17,
+    "word_count": 39,
+    "source": "Letter to Colonel Charles Yancey"
+  },
+  {
+    "path": "founders",
+    "title": "Faction and Liberty",
+    "author": "James Madison",
+    "content": "Liberty is to faction what air is to fire, an aliment without which it instantly expires. But it could not be less folly to abolish liberty, which is essential to political life, because it nourishes faction, than it would be to wish the annihilation of air.",
+    "difficulty_order": 18,
+    "word_count": 45,
+    "source": "Federalist No. 10"
+  },
+  {
+    "path": "founders",
+    "title": "New Birth of Freedom",
+    "author": "Abraham Lincoln",
+    "content": "That this nation, under God, shall have a new birth of freedom—and that government of the people, by the people, for the people, shall not perish from the earth. It is rather for us to be here dedicated to the great task remaining before us—that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion.",
+    "difficulty_order": 19,
+    "word_count": 65,
+    "source": "Gettysburg Address"
+  },
+  {
+    "path": "founders",
+    "title": "Constitutional Convention",
+    "author": "Benjamin Franklin",
+    "content": "I confess that I do not entirely approve of this Constitution at present; but I consent to it because I expect no better, and because I am not sure it is not the best. The opinions I have had of its errors I sacrifice to the public good. I have never whispered a syllable of them abroad. Within these walls they were born, and here they shall die. If every one of us in returning to our constituents were to report the objections he has had to it, we might prevent its being generally received, and thereby lose all the salutary effects and great advantages resulting naturally in our favor among foreign nations as well as among ourselves, from our real or apparent unanimity.",
+    "difficulty_order": 20,
+    "word_count": 122,
+    "source": "Constitutional Convention Speech"
+  }
+]

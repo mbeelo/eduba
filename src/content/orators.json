@@ -1,0 +1,182 @@
+[
+  {
+    "path": "orators",
+    "title": "Blood, Toil, Tears and Sweat",
+    "author": "Winston Churchill",
+    "content": "I have nothing to offer but blood, toil, tears and sweat.",
+    "difficulty_order": 1,
+    "word_count": 11,
+    "source": "First Speech as Prime Minister"
+  },
+  {
+    "path": "orators",
+    "title": "Fear Itself",
+    "author": "Franklin D. Roosevelt",
+    "content": "The only thing we have to fear is fear itself.",
+    "difficulty_order": 2,
+    "word_count": 9,
+    "source": "First Inaugural Address"
+  },
+  {
+    "path": "orators",
+    "title": "Dream",
+    "author": "Martin Luther King Jr.",
+    "content": "I have a dream that one day this nation will rise up.",
+    "difficulty_order": 3,
+    "word_count": 12,
+    "source": "I Have a Dream"
+  },
+  {
+    "path": "orators",
+    "title": "Give Me Liberty",
+    "author": "Patrick Henry",
+    "content": "Give me liberty, or give me death!",
+    "difficulty_order": 4,
+    "word_count": 7,
+    "source": "Virginia Convention Speech"
+  },
+  {
+    "path": "orators",
+    "title": "Speak Softly",
+    "author": "Theodore Roosevelt",
+    "content": "Speak softly and carry a big stick; you will go far.",
+    "difficulty_order": 5,
+    "word_count": 11,
+    "source": "Minnesota State Fair Speech"
+  },
+  {
+    "path": "orators",
+    "title": "Cicero's Duty",
+    "author": "Cicero",
+    "content": "The authority of those who teach is often an obstacle to those who want to learn.",
+    "difficulty_order": 6,
+    "word_count": 16,
+    "source": "De Natura Deorum"
+  },
+  {
+    "path": "orators",
+    "title": "Fourth of July",
+    "author": "Frederick Douglass",
+    "content": "What to the slave is the Fourth of July? I answer: a day that reveals to him more than all other days.",
+    "difficulty_order": 7,
+    "word_count": 20,
+    "source": "What to the Slave is the Fourth of July?"
+  },
+  {
+    "path": "orators",
+    "title": "We Shall Fight",
+    "author": "Winston Churchill",
+    "content": "We shall defend our island, whatever the cost may be. We shall fight on the beaches, we shall fight on the landing grounds.",
+    "difficulty_order": 8,
+    "word_count": 22,
+    "source": "We Shall Fight on the Beaches"
+  },
+  {
+    "path": "orators",
+    "title": "Arsenal of Democracy",
+    "author": "Franklin D. Roosevelt",
+    "content": "We must be the great arsenal of democracy. For us this is an emergency as serious as war itself.",
+    "difficulty_order": 9,
+    "word_count": 18,
+    "source": "Arsenal of Democracy Speech"
+  },
+  {
+    "path": "orators",
+    "title": "Content of Character",
+    "author": "Martin Luther King Jr.",
+    "content": "I have a dream that my four little children will one day be judged not by the color of their skin but by the content of their character.",
+    "difficulty_order": 10,
+    "word_count": 27,
+    "source": "I Have a Dream"
+  },
+  {
+    "path": "orators",
+    "title": "Strenuous Life",
+    "author": "Theodore Roosevelt",
+    "content": "Far better it is to dare mighty things, to win glorious triumphs, even though checkered by failure, than to take rank with those poor spirits who neither enjoy much nor suffer much.",
+    "difficulty_order": 11,
+    "word_count": 30,
+    "source": "The Strenuous Life"
+  },
+  {
+    "path": "orators",
+    "title": "Learning from Slavery",
+    "author": "Frederick Douglass",
+    "content": "I prayed for twenty years but received no answer until I prayed with my legs. If there is no struggle, there is no progress. Power concedes nothing without a demand.",
+    "difficulty_order": 12,
+    "word_count": 29,
+    "source": "Various Speeches"
+  },
+  {
+    "path": "orators",
+    "title": "Against Catiline",
+    "author": "Cicero",
+    "content": "How long, Catiline, will you abuse our patience? How long will that madness of yours mock us? To what end will your unbridled audacity hurl itself? Do not the nightly guards of the Palatine move you?",
+    "difficulty_order": 13,
+    "word_count": 35,
+    "source": "First Catiline Oration"
+  },
+  {
+    "path": "orators",
+    "title": "Their Finest Hour",
+    "author": "Winston Churchill",
+    "content": "Let us therefore brace ourselves to our duties, and so bear ourselves that if the British Empire and its Commonwealth last for a thousand years, men will still say, 'This was their finest hour.'",
+    "difficulty_order": 14,
+    "word_count": 34,
+    "source": "Their Finest Hour"
+  },
+  {
+    "path": "orators",
+    "title": "Day of Infamy",
+    "author": "Franklin D. Roosevelt",
+    "content": "Yesterday, December 7th, 1941—a date which will live in infamy—the United States of America was suddenly and deliberately attacked by naval and air forces of the Empire of Japan.",
+    "difficulty_order": 15,
+    "word_count": 30,
+    "source": "Pearl Harbor Address"
+  },
+  {
+    "path": "orators",
+    "title": "Free at Last",
+    "author": "Martin Luther King Jr.",
+    "content": "And when this happens, when we allow freedom to ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children will be able to sing: Free at last! Free at last! Thank God Almighty, we are free at last!",
+    "difficulty_order": 16,
+    "word_count": 56,
+    "source": "I Have a Dream"
+  },
+  {
+    "path": "orators",
+    "title": "Chains of Slavery",
+    "author": "Patrick Henry",
+    "content": "Sir, we have done everything that could be done to avert the storm which is now coming on. We have petitioned; we have remonstrated; we have supplicated; we have prostrated ourselves before the throne, and have implored its interposition to arrest the tyrannical hands of the ministry and Parliament.",
+    "difficulty_order": 17,
+    "word_count": 50,
+    "source": "Give Me Liberty Speech"
+  },
+  {
+    "path": "orators",
+    "title": "Citizenship Rights",
+    "author": "Theodore Roosevelt",
+    "content": "In the first place, we should insist that if the immigrant who comes here in good faith becomes an American and assimilates himself to us, he shall be treated on an exact equality with everyone else, for it is an outrage to discriminate against any such man because of creed, or birthplace, or origin.",
+    "difficulty_order": 18,
+    "word_count": 53,
+    "source": "True Americanism"
+  },
+  {
+    "path": "orators",
+    "title": "Slavery and Christianity",
+    "author": "Frederick Douglass",
+    "content": "Between the Christianity of this land, and the Christianity of Christ, I recognize the widest possible difference—so wide, that to receive the one as good, pure, and holy, is of necessity to reject the other as bad, corrupt, and wicked. To be the friend of the one, is of necessity to be the enemy of the other.",
+    "difficulty_order": 19,
+    "word_count": 57,
+    "source": "What to the Slave is the Fourth of July?"
+  },
+  {
+    "path": "orators",
+    "title": "Liberty and Republic",
+    "author": "Cicero",
+    "content": "What is the good of a house if you haven't got a tolerable planet to put it on? The welfare of the people is the supreme law. Nothing is so unbelievable that oratory cannot make it acceptable. There is nothing so absurd that it has not been said by some philosopher. Authority is quite degraded by those who claim it without merit and assert it with severity.",
+    "difficulty_order": 20,
+    "word_count": 62,
+    "source": "Various Works"
+  }
+]
