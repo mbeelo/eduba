@@ -13,7 +13,8 @@ import {
   Section,
 } from '@/components/ui';
 import { Footer } from '@/components/ui/footer';
-import { AdBanner } from '@/components/ui/ad-banner';
+// TODO: Uncomment when AdSense is approved
+// import { AdBanner } from '@/components/ui/ad-banner';
 import { SignUpPrompt } from '@/components/ui/signup-prompt';
 
 export default function DashboardPage() {
@@ -178,8 +179,8 @@ export default function DashboardPage() {
               />
             )}
 
-            {/* Ad Banner */}
-            <AdBanner className="mb-8" />
+            {/* TODO: Uncomment when AdSense is approved */}
+            {/* <AdBanner className="mb-8" /> */}
 
             {/* Learning Paths Section - Simple List */}
             <div className="mb-8">

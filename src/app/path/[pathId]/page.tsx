@@ -22,7 +22,8 @@ import {
   LoadingCard,
 } from '@/components/ui';
 import { Footer } from '@/components/ui/footer';
-import { AdBanner } from '@/components/ui/ad-banner';
+// TODO: Uncomment when AdSense is approved
+// import { AdBanner } from '@/components/ui/ad-banner';
 
 export default function PathDetailPage() {
   const params = useParams();
@@ -340,8 +341,8 @@ export default function PathDetailPage() {
               </div>
             </div>
 
-            {/* Ad Banner */}
-            <AdBanner className="mb-8" />
+            {/* TODO: Uncomment when AdSense is approved */}
+            {/* <AdBanner className="mb-8" /> */}
 
             {/* Passages List */}
             <div className="space-y-6">

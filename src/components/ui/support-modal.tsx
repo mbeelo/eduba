@@ -11,25 +11,26 @@ interface SupportModalProps {
 }
 
 export function SupportModal({ isOpen, onClose }: SupportModalProps) {
-  const [adsEnabled, setAdsEnabled] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('eduba_ads_enabled') === 'true';
-    }
-    return false;
-  });
+  // TODO: Uncomment when AdSense is approved
+  // const [adsEnabled, setAdsEnabled] = useState(() => {
+  //   if (typeof window !== 'undefined') {
+  //     return localStorage.getItem('eduba_ads_enabled') === 'true';
+  //   }
+  //   return false;
+  // });
 
-  const handleToggleAds = () => {
-    const newState = !adsEnabled;
-    setAdsEnabled(newState);
-    localStorage.setItem('eduba_ads_enabled', String(newState));
+  // const handleToggleAds = () => {
+  //   const newState = !adsEnabled;
+  //   setAdsEnabled(newState);
+  //   localStorage.setItem('eduba_ads_enabled', String(newState));
 
-    if (newState) {
-      // Clear any previous ad dismissal when re-enabling ads
-      sessionStorage.removeItem('ad_dismissed');
-      // Reload page to show ads
-      window.location.reload();
-    }
-  };
+  //   if (newState) {
+  //     // Clear any previous ad dismissal when re-enabling ads
+  //     sessionStorage.removeItem('ad_dismissed');
+  //     // Reload page to show ads
+  //     window.location.reload();
+  //   }
+  // };
 
   const handleDonate = () => {
     window.open('https://buymeacoffee.com/eduba', '_blank');
@@ -48,9 +49,10 @@ export function SupportModal({ isOpen, onClose }: SupportModalProps) {
           </BodyText>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
+          {/* TODO: Uncomment when AdSense is approved */}
           {/* Enable Ads */}
-          <div className="clean-card p-6 text-center space-y-4 hover:shadow-md transition-shadow">
+          {/* <div className="clean-card p-6 text-center space-y-4 hover:shadow-md transition-shadow">
             <Button
               onClick={handleToggleAds}
               variant="primary"
@@ -62,7 +64,7 @@ export function SupportModal({ isOpen, onClose }: SupportModalProps) {
             <BodyText variant="muted" className="text-sm">
               Support Eduba with tasteful, non-intrusive banner ads that don't interfere with your practice.
             </BodyText>
-          </div>
+          </div> */}
 
           {/* Donate */}
           <div className="clean-card p-6 text-center space-y-4 hover:shadow-md transition-shadow">

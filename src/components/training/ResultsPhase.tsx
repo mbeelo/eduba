@@ -6,7 +6,9 @@ import { BodyText, Heading, FeedbackText } from '@/components/ui/typography';
 import { Layout } from '@/components/ui/layout';
 import { getAccuracyDescription, getEncouragementMessage, calculateFormatAccuracy } from '@/lib/comparison';
 import type { ComparisonResult } from '@/lib/comparison';
-import { AdBanner } from '@/components/ui/ad-banner';
+// TODO: Uncomment when AdSense is approved
+// // TODO: Uncomment when AdSense is approved
+// import { AdBanner } from '@/components/ui/ad-banner';
 import { useAuth } from '@/lib/auth';
 import { PracticeCompletionPanel } from '@/components/pro/PracticeCompletionPanel';
 import { SignUpPrompt, useSignUpPrompts } from '@/components/ui/signup-prompt';
@@ -252,8 +254,8 @@ export function ResultsPhase({
           </div>
         </div>
 
-        {/* Ad Banner */}
-        <AdBanner className="mb-8" />
+        {/* TODO: Uncomment when AdSense is approved */}
+        {/* <AdBanner className="mb-8" /> */}
 
         {/* Practice Completion Panel */}
         <div className="max-w-4xl mx-auto mb-8">

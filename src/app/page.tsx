@@ -189,12 +189,12 @@ export default function Home() {
             </div>
 
             {/* Learning Paths Dashboard Mockup */}
-            <div className="max-w-5xl mx-auto mb-8">
-              <div className="clean-card p-6" style={{ background: 'var(--background)' }}>
-                <div className="grid grid-cols-3 gap-6">
+            <div className="max-w-5xl mx-auto mb-8 px-4 sm:px-6">
+              <div className="clean-card p-4 sm:p-6" style={{ background: 'var(--background)' }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
                   <Link href="/path/founders">
-                    <div className="clean-card p-6 flex flex-col h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
                       <div className="mb-4">
                         <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
                           The Founders
@@ -218,7 +218,7 @@ export default function Home() {
                   </Link>
 
                   <Link href="/path/stoics">
-                    <div className="clean-card p-6 flex flex-col h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
                       <div className="mb-4">
                         <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
                           The Stoics
@@ -242,7 +242,7 @@ export default function Home() {
                   </Link>
 
                   <Link href="/path/poets">
-                    <div className="clean-card p-6 flex flex-col h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
                       <div className="mb-4">
                         <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
                           The Poets
@@ -266,7 +266,7 @@ export default function Home() {
                   </Link>
 
                   <Link href="/path/philosophers">
-                    <div className="clean-card p-6 flex flex-col h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
                       <div className="mb-4">
                         <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
                           The Philosophers
@@ -290,7 +290,7 @@ export default function Home() {
                   </Link>
 
                   <Link href="/path/scientists">
-                    <div className="clean-card p-6 flex flex-col h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
                       <div className="mb-4">
                         <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
                           The Scientists
@@ -314,7 +314,7 @@ export default function Home() {
                   </Link>
 
                   <Link href="/path/orators">
-                    <div className="clean-card p-6 flex flex-col h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
                       <div className="mb-4">
                         <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
                           The Orators

@@ -9,7 +9,8 @@ import { Container, Section } from '@/components/ui/layout';
 import { BodyText, Heading } from '@/components/ui/typography';
 import { Button } from '@/components/ui/button';
 import { Footer } from '@/components/ui/footer';
-import { AdBanner } from '@/components/ui/ad-banner';
+// TODO: Uncomment when AdSense is approved
+// import { AdBanner } from '@/components/ui/ad-banner';
 
 interface UserStats {
   totalPassages: number;
@@ -191,8 +192,8 @@ export default function AccountPage() {
                 </BodyText>
               </div>
 
-              {/* Ad Banner */}
-              <AdBanner className="mb-8" />
+              {/* TODO: Uncomment when AdSense is approved */}
+              {/* <AdBanner className="mb-8" /> */}
 
               {/* Profile Info */}
               <div className="clean-card">

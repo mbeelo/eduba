@@ -12,7 +12,7 @@ export default async function OpenGraphImage() {
     (
       <div
         style={{
-          background: 'linear-gradient(135deg, #323437 0%, #2a2b2e 100%)',
+          background: '#ffffff',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -49,7 +49,7 @@ export default async function OpenGraphImage() {
           <div
             style={{
               fontSize: 48,
-              color: '#ffffff',
+              color: '#000000',
               fontWeight: '600',
               maxWidth: '800px',
               lineHeight: 1.2,
@@ -62,7 +62,7 @@ export default async function OpenGraphImage() {
           <div
             style={{
               fontSize: 32,
-              color: '#ffffff',
+              color: '#000000',
               opacity: 0.8,
               maxWidth: '700px',
               lineHeight: 1.3,
