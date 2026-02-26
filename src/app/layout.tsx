@@ -9,6 +9,7 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 });
 
 // Serif font for content/passages - optimized for reading and memorization
@@ -18,6 +19,7 @@ const crimsonText = Crimson_Text({
   weight: ["400", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  fallback: ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
 });
 
 // Monospace font for code or precise text elements
@@ -25,6 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   display: "swap",
+  fallback: ['Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'monospace'],
 });
 
 export const metadata: Metadata = {
@@ -119,6 +122,48 @@ export default function RootLayout({
               gtag('js', new Date());
               gtag('config', 'G-H4EEGEK9Q4');
             `,
+          }}
+        />
+
+        {/* Google AdSense */}
+        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
+
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              "name": "Eduba",
+              "description": "Most tools help you read more. Eduba helps you remember. Train recall on passages from history's greatest minds using the traditional scribe method.",
+              "url": "https://eduba.app",
+              "applicationCategory": "EducationApplication",
+              "operatingSystem": "Web",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+              },
+              "educationalLevel": "All Levels",
+              "educationalUse": "Memory Training",
+              "learningResourceType": ["Interactive Content", "Exercise"],
+              "audience": {
+                "@type": "EducationalAudience",
+                "educationalRole": "student"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Eduba"
+              }
+            })
           }}
         />
       </head>

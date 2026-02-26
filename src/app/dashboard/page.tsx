@@ -13,8 +13,7 @@ import {
   Section,
 } from '@/components/ui';
 import { Footer } from '@/components/ui/footer';
-// TODO: Uncomment when AdSense is approved
-// import { AdBanner } from '@/components/ui/ad-banner';
+import { AdBanner } from '@/components/ui/ad-banner';
 import { SignUpPrompt } from '@/components/ui/signup-prompt';
 
 export default function DashboardPage() {
@@ -179,8 +178,11 @@ export default function DashboardPage() {
               />
             )}
 
-            {/* TODO: Uncomment when AdSense is approved */}
-            {/* <AdBanner className="mb-8" /> */}
+            <AdBanner
+              className="mb-8"
+              adSlot={process.env.NEXT_PUBLIC_ADSENSE_DASHBOARD_SLOT || "1234567890"}
+              adFormat="rectangle"
+            />
 
             {/* Learning Paths Section - Simple List */}
             <div className="mb-8">
@@ -189,14 +191,45 @@ export default function DashboardPage() {
               </span>
 
               {progressError && (
-                <div className="mb-6 p-4 clean-card">
-                  <BodyText>{progressError}</BodyText>
-                  <button
-                    className="button-subtle mt-2"
-                    onClick={() => window.location.reload()}
-                  >
-                    try again
-                  </button>
+                <div className="mb-6 p-4 clean-card border-l-4 border-red-500">
+                  <div className="text-sm font-medium text-red-700 mb-2">
+                    Unable to Load Progress
+                  </div>
+                  <BodyText className="text-red-600 mb-4">{progressError}</BodyText>
+                  <div className="flex gap-2">
+                    <button
+                      className="button-primary text-sm px-4 py-2"
+                      onClick={() => {
+                        setProgressError(null);
+                        setProgressLoading(true);
+                        // Trigger reload of progress data
+                        if (user && !isAnonymous) {
+                          getUserPathsProgress(user.id).then(setPathsProgress).catch((error) => {
+                            console.error('Error reloading progress:', error);
+                            setProgressError('Failed to reload progress data');
+                          }).finally(() => setProgressLoading(false));
+                        } else {
+                          try {
+                            const progress = getLocalPathsProgress();
+                            setPathsProgress(progress);
+                          } catch (error) {
+                            console.error('Error reloading local progress:', error);
+                            setProgressError('Failed to reload local progress data');
+                          } finally {
+                            setProgressLoading(false);
+                          }
+                        }
+                      }}
+                    >
+                      Retry
+                    </button>
+                    <button
+                      className="button-subtle text-sm px-4 py-2"
+                      onClick={() => setProgressError(null)}
+                    >
+                      Dismiss
+                    </button>
+                  </div>
                 </div>
               )}
 

@@ -19,16 +19,52 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/auth/login`,
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/techniques`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/benefits`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/study-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/authors`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.5,
     },
     {
+      url: `${baseUrl}/auth/login`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.4,
+    },
+    {
       url: `${baseUrl}/auth/signup`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.5,
+      priority: 0.4,
     },
     {
       url: `${baseUrl}/privacy`,
@@ -46,19 +82,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   try {
     // Get all learning paths
-    const { data: passages } = await supabase
+    const { data: passages, error } = await supabase
       .from('passages')
       .select('path, id')
       .order('path')
 
-    if (!passages) return staticPages
+    if (error) {
+      console.error('Supabase error in sitemap:', error)
+      return staticPages
+    }
+
+    if (!passages || passages.length === 0) {
+      console.warn('No passages found for sitemap')
+      return staticPages
+    }
 
     // Get unique paths
     const uniquePaths = [...new Set(passages.map(p => p.path))]
 
     // Add path pages
     const pathPages = uniquePaths.map(path => ({
-      url: `${baseUrl}/paths/${path}`,
+      url: `${baseUrl}/path/${path}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
@@ -72,6 +116,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }))
 
+    console.log(`Generated sitemap with ${staticPages.length + pathPages.length + practicePages.length} pages`)
     return [...staticPages, ...pathPages, ...practicePages]
   } catch (error) {
     console.error('Error generating sitemap:', error)
