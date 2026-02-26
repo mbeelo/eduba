@@ -194,9 +194,9 @@ export default function Home() {
             </div>
 
             {/* Learning Paths Dashboard Mockup */}
-            <div className="max-w-5xl mx-auto mb-8 px-4 sm:px-6">
-              <div className="clean-card p-4 sm:p-6" style={{ background: 'var(--background)' }}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="max-w-7xl mx-auto mb-8 px-4 sm:px-6">
+              <div className="clean-card p-6 sm:p-8" style={{ background: 'var(--background)' }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
                   <Link href="/path/founders">
                     <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
