@@ -153,19 +153,16 @@ export default function PathDetailPage() {
   if (authLoading || loading) {
     return (
       <div className="min-h-screen" style={{ background: 'var(--background)' }}>
-        <header className="clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }}>
+        <header className="bg-white clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }}>
           <Container className="flex h-16 items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">E</span>
-              </div>
-              <Heading level={3} className="text-reading-text font-bold">
-                Eduba
-              </Heading>
+            <div className="flex items-center">
+              <span className="text-lg" style={{ color: 'var(--accent)' }}>
+                eduba
+              </span>
             </div>
-            <Button variant="ghost" onClick={handleBackToDashboard}>
-              Back to Dashboard
-            </Button>
+            <button className="button-subtle text-xs sm:text-sm" onClick={handleBackToDashboard}>
+              dashboard
+            </button>
           </Container>
         </header>
 
@@ -189,19 +186,16 @@ export default function PathDetailPage() {
   if (error) {
     return (
       <div className="min-h-screen" style={{ background: 'var(--background)' }}>
-        <header className="clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }}>
+        <header className="bg-white clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }}>
           <Container className="flex h-16 items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">E</span>
-              </div>
-              <Heading level={3} className="text-reading-text font-bold">
-                Eduba
-              </Heading>
+            <div className="flex items-center">
+              <span className="text-lg" style={{ color: 'var(--accent)' }}>
+                eduba
+              </span>
             </div>
-            <Button variant="ghost" onClick={handleBackToDashboard}>
-              Back to Dashboard
-            </Button>
+            <button className="button-subtle text-xs sm:text-sm" onClick={handleBackToDashboard}>
+              dashboard
+            </button>
           </Container>
         </header>
 
@@ -279,11 +273,18 @@ export default function PathDetailPage() {
               // Anonymous user options
               <>
                 <button
-                  className="button-primary text-xs sm:text-sm"
-                  onClick={() => router.push('/auth/register')}
+                  className="button-subtle text-xs sm:text-sm"
+                  onClick={() => router.push('/auth/signup')}
                 >
                   <span className="hidden sm:inline">sign up</span>
                   <span className="sm:hidden">sign up</span>
+                </button>
+                <button
+                  className="button-subtle text-xs sm:text-sm"
+                  onClick={() => router.push('/auth/login')}
+                >
+                  <span className="hidden sm:inline">log in</span>
+                  <span className="sm:hidden">log in</span>
                 </button>
                 <button
                   className="button-subtle text-xs sm:text-sm"

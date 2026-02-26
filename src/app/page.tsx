@@ -196,7 +196,7 @@ export default function Home() {
             {/* Learning Paths Dashboard Mockup */}
             <div className="max-w-5xl mx-auto mb-8 px-4 sm:px-6">
               <div className="clean-card p-4 sm:p-6" style={{ background: 'var(--background)' }}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
 
                   <Link href="/path/founders">
                     <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
@@ -341,11 +341,59 @@ export default function Home() {
                       </div>
                     </div>
                   </Link>
+
+                  <Link href="/path/warriors">
+                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                      <div className="mb-4">
+                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                          The Warriors
+                        </Heading>
+                      </div>
+                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                        Sun Tzu, Machiavelli, Caesar, Thucydides
+                      </BodyText>
+                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                      </div>
+                      <div className="flex justify-between items-end mt-auto">
+                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                          Start →
+                        </div>
+                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                          0/25 (0%)
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+
+                  <Link href="/path/novelists">
+                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                      <div className="mb-4">
+                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                          The Novelists
+                        </Heading>
+                      </div>
+                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                        Dickens, Melville, Dostoevsky, Tolstoy
+                      </BodyText>
+                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                      </div>
+                      <div className="flex justify-between items-end mt-auto">
+                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                          Start →
+                        </div>
+                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                          0/6 (0%)
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
 
                 <div className="text-center mt-6 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
                   <BodyText className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>
-                    8 paths • 151 passages • 15–250 words
+                    9 paths • 236 passages • 15–250 words
                   </BodyText>
                 </div>
               </div>
