@@ -109,7 +109,7 @@ export default function DashboardPage() {
               <>
                 <button
                   className="button-subtle text-xs sm:text-sm"
-                  onClick={() => router.push('/auth/register')}
+                  onClick={() => router.push('/auth/signup')}
                 >
                   <span className="hidden sm:inline">sign up</span>
                   <span className="sm:hidden">sign up</span>

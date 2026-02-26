@@ -41,6 +41,11 @@ export default function Home() {
             >
               {theme === 'light' ? '🌙' : '☀️'}
             </button>
+            <Link href="/auth/signup">
+              <button className="button-subtle text-xs sm:text-sm">
+                Sign Up
+              </button>
+            </Link>
             <Link href="/dashboard">
               <button className="button-subtle text-xs sm:text-sm">
                 Dashboard

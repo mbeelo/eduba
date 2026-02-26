@@ -56,14 +56,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://eduba.app'),
+  metadataBase: new URL('https://eduba.co'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://eduba.app',
+    url: 'https://eduba.co',
     title: 'Eduba - Most tools help you read more. Eduba helps you remember.',
     description: 'Most tools help you read more. Eduba helps you remember. Train recall on passages from history\'s greatest minds using the traditional scribe method.',
     siteName: 'Eduba',
@@ -143,7 +143,7 @@ export default function RootLayout({
               "@type": "EducationalOrganization",
               "name": "Eduba",
               "description": "Most tools help you read more. Eduba helps you remember. Train recall on passages from history's greatest minds using the traditional scribe method.",
-              "url": "https://eduba.app",
+              "url": "https://eduba.co",
               "applicationCategory": "EducationApplication",
               "operatingSystem": "Web",
               "offers": {

@@ -240,7 +240,7 @@ export default function PracticePage() {
                 <>
                   <button
                     className="button-subtle text-xs sm:text-sm"
-                    onClick={() => router.push('/auth/register')}
+                    onClick={() => router.push('/auth/signup')}
                   >
                     <span className="hidden sm:inline">sign up</span>
                     <span className="sm:hidden">sign up</span>
@@ -255,7 +255,7 @@ export default function PracticePage() {
                 </>
               )}
               <button className="button-subtle text-xs sm:text-sm" onClick={handleDashboardClick}>
-                <span className="hidden sm:inline">{returnPath ? 'back to path' : 'dashboard'}</span>
+                <span className="hidden sm:inline">{returnPath ? 'path' : 'dashboard'}</span>
                 <span className="sm:hidden">{returnPath ? 'path' : 'dash'}</span>
               </button>
             </div>
