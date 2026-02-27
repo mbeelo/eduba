@@ -55,12 +55,12 @@ export default function ContactPage() {
                   Need help with Eduba? Have questions about how to use the app? We're here to help.
                 </BodyText>
                 <a
-                  href="mailto:support@behelo.com?subject=Eduba%20Support%20Request&body=Hi%20there,%0D%0A%0D%0AI%20need%20help%20with%20Eduba.%0D%0A%0D%0APlease%20describe%20your%20issue%20or%20question:%0D%0A%0D%0A%0D%0ABrowser:%20%0D%0ADevice:%20%0D%0A%0D%0AThanks!"
+                  href="mailto:michael@behelo.com?subject=Eduba%20Support%20Request&body=Hi%20there,%0D%0A%0D%0AI%20need%20help%20with%20Eduba.%0D%0A%0D%0APlease%20describe%20your%20issue%20or%20question:%0D%0A%0D%0A%0D%0ABrowser:%20%0D%0ADevice:%20%0D%0A%0D%0AThanks!"
                   className="button-primary inline-block px-6 py-3 text-sm font-medium"
                 >
                   Get Support
                 </a>
-                <div className="label-mono text-xs opacity-60" style={{ color: 'var(--foreground)' }}>support@behelo.com</div>
+                <div className="label-mono text-xs opacity-60" style={{ color: 'var(--foreground)' }}>michael@behelo.com</div>
               </div>
 
               {/* Bug Reports */}
