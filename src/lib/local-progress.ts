@@ -25,7 +25,6 @@ const PATH_PASSAGE_COUNTS = {
   poets: 20,
   philosophers: 20,
   orators: 20,
-  scriptures: 20,
   novelists: 20,
   scientists: 20,
   warriors: 20

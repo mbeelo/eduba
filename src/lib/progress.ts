@@ -299,11 +299,6 @@ export function getPathMetadata(pathId: string) {
       description: 'Speeches that moved nations and changed history',
       color: 'blue'
     },
-    scriptures: {
-      name: 'The Scriptures',
-      description: 'Sacred wisdom across traditions',
-      color: 'purple'
-    },
     novelists: {
       name: 'The Novelists',
       description: 'Immortal lines from classic literature',
