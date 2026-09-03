@@ -9,7 +9,16 @@ CREATE TABLE IF NOT EXISTS passages (
   author TEXT,
   content TEXT NOT NULL,
   difficulty_order INTEGER NOT NULL,  -- 1, 2, 3... determines sequence
-  created_at TIMESTAMP DEFAULT NOW()
+  created_at TIMESTAMP DEFAULT NOW(),
+  -- SEO content fields (see migrations/add-seo-content-fields.sql)
+  slug TEXT UNIQUE,  -- stable identity across reseeds; computed as slugify(author)-slugify(title)
+  work TEXT,  -- e.g. 'Meditations' -- hand-curated, only set for seo_ready rows initially
+  seo_title TEXT,
+  seo_description TEXT,
+  seo_intro TEXT,  -- 80-200 word contextual blurb
+  theme_tags TEXT[],
+  seo_ready BOOLEAN NOT NULL DEFAULT false,  -- gates public /passages/[slug] visibility + sitemap inclusion
+  featured BOOLEAN NOT NULL DEFAULT false
 );
 
 -- Create user progress table

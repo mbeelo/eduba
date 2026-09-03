@@ -257,20 +257,8 @@ export function ResultsPhase({
         {/* TODO: Uncomment when AdSense is approved */}
         {/* <AdBanner className="mb-8" /> */}
 
-        {/* Practice Completion Panel */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <PracticeCompletionPanel />
-        </div>
-
-        {/* Signup Prompt */}
-        {showCompletionPrompt && (
-          <div className="max-w-4xl mx-auto mb-8">
-            <SignUpPrompt variant="card" trigger="progress" />
-          </div>
-        )}
-
         {/* Results Message and Actions */}
-        <div className="text-center space-y-8">
+        <div className="text-center space-y-8 mb-8">
           {isPassing ? (
             <div className="space-y-4">
               <Heading level={2} className="text-xl">
@@ -292,7 +280,7 @@ export function ResultsPhase({
 
           {/* Action Links */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            {!isPassing && (
+            {(!isPassing || isAnonymous) && (
               <button
                 onClick={onTryAgain}
                 className="text-lg transition-colors"
@@ -326,6 +314,18 @@ export function ResultsPhase({
             )}
           </div>
         </div>
+
+        {/* Practice Completion Panel */}
+        <div className="max-w-4xl mx-auto mb-8">
+          <PracticeCompletionPanel />
+        </div>
+
+        {/* Signup Prompt */}
+        {showCompletionPrompt && (
+          <div className="max-w-4xl mx-auto mb-8">
+            <SignUpPrompt variant="card" trigger="progress" />
+          </div>
+        )}
       </div>
     </div>
   );

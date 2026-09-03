@@ -1,19 +1,9 @@
 #!/usr/bin/env node
 //
 // MASTER CONTENT FILE - DO NOT LOSE THIS!
-// This file contains ALL curated content for Eduba (156 passages total)
+// This file contains ALL curated content for Eduba (151 passages total)
 // Created: 2026-01-06
-// Last Updated: 2026-09-01
-//
-// This script upserts by `slug` (see src/lib/slug.ts for the typed version
-// used by the app's Server Components; ./scripts/slug-utils.js carries the
-// same logic in plain CommonJS for this script and scripts/backfill-slugs.js,
-// since neither has a TS toolchain in its execution path).
-// Existing passages match by slug and update in place — ids and any linked
-// user_progress rows are preserved. Only passages whose slug is no longer
-// present in this file get deleted (see reconciliation step below).
-// Before this could be switched to upsert mode, scripts/backfill-slugs.js
-// must have been run once to give every existing row a non-null slug.
+// Last Updated: 2026-01-13
 //
 // Content Summary (Ruthlessly Curated for Launch):
 // - Stoics: 25 passages (Marcus Aurelius, Seneca, Epictetus)
@@ -46,22 +36,10 @@ if (!supabaseUrl || !supabaseKey) {
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-const { passageSlug } = require('./scripts/slug-utils');
-
 const passages = [
   // The Stoics Path - 25 substantial passages from Marcus Aurelius, Seneca, and Epictetus
-  { path: 'stoics', title: 'Power Over Mind', author: 'Marcus Aurelius', content: 'You have power over your mind—not outside events. Realize this, and you will find strength in the understanding that external circumstances cannot disturb your inner peace.', difficulty_order: 1,
-    work: 'Meditations', seo_ready: true,
-    seo_title: 'Power Over Mind by Marcus Aurelius',
-    seo_description: 'Read and practice recalling this passage from Marcus Aurelius\' Meditations using Eduba\'s active recall trainer.',
-    seo_intro: 'Written around 170-180 AD as private notes to himself, Marcus Aurelius\' Meditations is one of the most enduring works of Stoic philosophy. This passage distills the core Stoic claim: we cannot control external events, only our judgments about them. As Roman emperor, Aurelius returned to this idea constantly as a discipline for governing under pressure.',
-    theme_tags: ['stoicism', 'self-control', 'resilience', 'inner-peace'] },
-  { path: 'stoics', title: 'What We Control', author: 'Epictetus', content: 'Some things are in our control and others not. Things in our control are opinion, pursuit, desire, aversion, and in a word, whatever are our own actions.', difficulty_order: 2,
-    work: 'Enchiridion', seo_ready: true,
-    seo_title: 'What We Control by Epictetus',
-    seo_description: 'Read and practice recalling this passage from Epictetus\' Enchiridion using Eduba\'s active recall trainer.',
-    seo_intro: 'This is the opening line of the Enchiridion ("Handbook"), a short manual of Stoic ethics compiled around 125 AD by Epictetus\' student Arrian. Epictetus, born a slave, built his philosophy on a single dividing line: what is "up to us" (our judgments, desires, and actions) versus everything else. That distinction became one of the most influential ideas in Stoic thought.',
-    theme_tags: ['stoicism', 'self-control', 'freedom', 'discipline'] },
+  { path: 'stoics', title: 'Power Over Mind', author: 'Marcus Aurelius', content: 'You have power over your mind—not outside events. Realize this, and you will find strength in the understanding that external circumstances cannot disturb your inner peace.', difficulty_order: 1 },
+  { path: 'stoics', title: 'What We Control', author: 'Epictetus', content: 'Some things are in our control and others not. Things in our control are opinion, pursuit, desire, aversion, and in a word, whatever are our own actions.', difficulty_order: 2},
   { path: 'stoics', title: 'Time as River', author: 'Marcus Aurelius', content: 'Time is like a river of passing events and the current is swift. No sooner does anything appear than it has swept by, and another comes in its place.', difficulty_order: 3},
   { path: 'stoics', title: 'True Wealth', author: 'Seneca', content: 'Every new beginning comes from some other beginning\'s end. It is not the man who has too little, but the man who craves more, who is poor.', difficulty_order: 4},
   { path: 'stoics', title: 'Universal Reason', author: 'Marcus Aurelius', content: 'Constantly regard the universe as one living being, having one substance and one soul. All things are mutually woven together and the bond is sacred; there is hardly anything unconnected.', difficulty_order: 5},
@@ -74,19 +52,9 @@ const passages = [
   { path: 'stoics', title: 'The Discipline of Desire', author: 'Epictetus', content: 'Remember that you must behave in life as you would behave at a banquet. Is anything brought around to you? Put out your hand and take your share with moderation. Does it pass by you? Do not stop it. Is it not yet come? Do not stretch your desire towards it, but wait.', difficulty_order: 12},
   { path: 'stoics', title: 'Death as Teacher', author: 'Marcus Aurelius', content: 'It is not death that a man should fear, but never beginning to live. Death smiles at us all, but all a man can do is smile back. The act of dying is one of the acts of life. Consider that everything is opinion. How much trouble he avoids who does not look to see what his neighbor says.', difficulty_order: 13},
   { path: 'stoics', title: 'Preparing for Adversity', author: 'Seneca', content: 'What is grief but an opinion? Set aside a certain number of days, during which you shall be content with the scantiest and cheapest fare, with coarse and rough dress, saying to yourself the while: "Is this the condition that I feared?" It is likely that some troubles will befall us; but it is not a present fact. How often has the unexpected happened! How often has the expected never come to pass!', difficulty_order: 14},
-  { path: 'stoics', title: 'The View from Above', author: 'Marcus Aurelius', content: 'Remember how brief life is, how vast the universe. What we do now echoes in eternity. Constantly regard the universe as one living being, having one substance and one soul. All things are mutually woven together and the bond is sacred; there is hardly anything unconnected with any other thing. For we were born to work together like feet, hands, and eyes, like the two rows of teeth, upper and lower. To obstruct each other is unnatural.', difficulty_order: 15,
-    work: 'Meditations', seo_ready: true,
-    seo_title: 'The View from Above by Marcus Aurelius',
-    seo_description: 'Read and practice recalling this passage from Marcus Aurelius\' Meditations using Eduba\'s active recall trainer.',
-    seo_intro: 'A recurring technique in the Meditations is what later commentators call the "view from above" — mentally stepping back to see one\'s life against the scale of the whole universe. Marcus Aurelius uses that scale here to argue for cooperation: since all things are woven into one interconnected whole, working against one another is unnatural, not just unkind.',
-    theme_tags: ['stoicism', 'perspective', 'cooperation', 'mortality'] },
+  { path: 'stoics', title: 'The View from Above', author: 'Marcus Aurelius', content: 'Remember how brief life is, how vast the universe. What we do now echoes in eternity. Constantly regard the universe as one living being, having one substance and one soul. All things are mutually woven together and the bond is sacred; there is hardly anything unconnected with any other thing. For we were born to work together like feet, hands, and eyes, like the two rows of teeth, upper and lower. To obstruct each other is unnatural.', difficulty_order: 15},
   { path: 'stoics', title: 'On True Freedom', author: 'Epictetus', content: 'No one can harm you without your permission. The person who betrays you is not your enemy—your uncontrolled reactions are. You are an actor in a play, which is as the author wants it to be; if short, then short; if long, then long; if he wants you to play a poor man, play even that role skillfully; and similarly if a cripple, or a public official, or a private citizen. For this is your business, to play admirably the role assigned you; but the selection of that role is Another\'s.', difficulty_order: 16},
-  { path: 'stoics', title: 'The Shortness of Life', author: 'Seneca', content: 'Life is long enough if you know how to use it. But when it is wasted in heedless luxury and spent on no good activity, we are forced at last by death\'s final constraint to realize that it has passed away before we knew it was passing. So it is: we receive not a short life but we make it short, and we are not ill-provided but wasteful of it. Just as when ample and princely wealth falls to a bad owner it is squandered in a moment, but wealth however small, if entrusted to a good custodian, increases with use, so our lifetime extends widely if you manage it properly.', difficulty_order: 17,
-    work: 'On the Shortness of Life', seo_ready: true,
-    seo_title: 'The Shortness of Life by Seneca',
-    seo_description: 'Read and practice recalling this passage from Seneca\'s On the Shortness of Life using Eduba\'s active recall trainer.',
-    seo_intro: 'Seneca wrote On the Shortness of Life (De Brevitate Vitae) around 49 AD as an essay-length letter arguing that life is not actually short — we just squander most of it. This opening passage sets up his central image: time is like wealth, ruined by a careless owner but multiplied by a careful one.',
-    theme_tags: ['stoicism', 'time', 'mortality', 'wisdom'] },
+  { path: 'stoics', title: 'The Shortness of Life', author: 'Seneca', content: 'Life is long enough if you know how to use it. But when it is wasted in heedless luxury and spent on no good activity, we are forced at last by death\'s final constraint to realize that it has passed away before we knew it was passing. So it is: we receive not a short life but we make it short, and we are not ill-provided but wasteful of it. Just as when ample and princely wealth falls to a bad owner it is squandered in a moment, but wealth however small, if entrusted to a good custodian, increases with use, so our lifetime extends widely if you manage it properly.', difficulty_order: 17},
   { path: 'stoics', title: 'The Rational Mind', author: 'Marcus Aurelius', content: 'You can commit injustice by doing nothing. Never esteem anything as of advantage to you that will make you break your word or lose your self-respect. The best revenge is not to be like your enemy. When you are troubled by something, you have forgotten this truth: that trouble is according to our judgment, and it is in our power to change our judgment. Confine yourself to the present.', difficulty_order: 18},
   { path: 'stoics', title: 'On Virtue and Character', author: 'Seneca', content: 'Every new beginning comes from some other beginning\'s end. What is quite unlooked for is more crushing in its effect, and unexpectedness adds to the weight of a disaster. A long-expected blow falls more gently. Therefore, let not your mind be crushed beneath the sudden impulse of circumstances. Long before the first day of our lives, we had our fates assigned to us; and each of us will meet the end which was spun for him from the beginning. Some things, it is true, the wise man does not fear even though they inspire fear in others, and some things he fears even though others are not afraid. The former attitude is that of one whose reason is sound, the latter of one who errs. The wise man will be prepared for either fortune.', difficulty_order: 19},
   { path: 'stoics', title: 'The Philosopher\'s Discipline', author: 'Epictetus', content: 'It is better to refuse to do wrong than to be prevented from it. No one can hurt you without your teaching them how. In everything you do, ask yourself: \"Is this something that\'s up to me, or not?\" If it\'s not up to you, then don\'t worry about it. The tranquillity that comes when you stop caring what they say. Or think, or do. Only what you do. External things are not the problem. It\'s your assessment of them. Which you can erase right now.', difficulty_order: 20},
@@ -97,46 +65,16 @@ const passages = [
   { path: 'stoics', title: 'The Complete Stoic Life', author: 'Seneca', content: 'Every new beginning comes from some other beginning\'s end. What is quite unlooked for is more crushing in its effect, and unexpectedness adds to the weight of a disaster. A long-expected blow falls more gently. Therefore, let not your mind be crushed beneath the sudden impulse of circumstances. Long before the first day of our lives, we had our fates assigned to us; and each of us will meet the end which was spun for him from the beginning. Some things, it is true, the wise man does not fear even though they inspire fear in others, and some things he fears even though others are not afraid. The former attitude is that of one whose reason is sound, the latter of one who errs. The wise man will be prepared for either fortune. Nothing, to my way of thinking, is a better proof of a well-ordered mind than a man\'s ability to stop just where he is and pass some time in his own company. Be always like this, that when Death comes to fetch you, you may be found ready to depart, and need ask delay from none. You will thus practice dying. What is grief but an opinion? Set aside a certain number of days, during which you shall be content with the scantiest and cheapest fare, with coarse and rough dress, saying to yourself the while: "Is this the condition that I feared?" It is likely that some troubles will befall us; but it is not a present fact.', difficulty_order: 25},
 
   // The Founders Path - 20 passages from American founding documents and speeches
-  { path: 'founders', title: 'Self-Evident Truths', author: 'Declaration of Independence', content: 'We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights.', difficulty_order: 1,
-    work: 'Declaration of Independence', seo_ready: true,
-    seo_title: 'Self-Evident Truths, Declaration of Independence',
-    seo_description: 'Read and practice recalling this passage from the Declaration of Independence using Eduba\'s active recall trainer.',
-    seo_intro: 'Adopted by the Continental Congress on July 4, 1776, the Declaration of Independence announced the American colonies\' separation from Britain. This line, drafted principally by Thomas Jefferson, is its most quoted sentence — the philosophical foundation the rest of the document argues from.',
-    theme_tags: ['founding-documents', 'liberty', 'equality', 'american-history'] },
+  { path: 'founders', title: 'Self-Evident Truths', author: 'Declaration of Independence', content: 'We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights.', difficulty_order: 1},
   { path: 'founders', title: 'Consent of the Governed', author: 'Declaration of Independence', content: 'That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it.', difficulty_order: 2},
-  { path: 'founders', title: 'Constitutional Preamble', author: 'U.S. Constitution', content: 'We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution.', difficulty_order: 3,
-    work: 'United States Constitution', seo_ready: true,
-    seo_title: 'Constitutional Preamble',
-    seo_description: 'Read and practice recalling the Preamble to the U.S. Constitution using Eduba\'s active recall trainer.',
-    seo_intro: 'Signed in 1787, the U.S. Constitution\'s preamble is a single sentence stating the document\'s purpose before any article of government begins. It has been memorized by generations of American schoolchildren and remains one of the most recognizable openings in political writing.',
-    theme_tags: ['founding-documents', 'government', 'american-history'] },
+  { path: 'founders', title: 'Constitutional Preamble', author: 'U.S. Constitution', content: 'We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution.', difficulty_order: 3},
   { path: 'founders', title: 'Life, Liberty, and Happiness', author: 'Declaration of Independence', content: 'That among these are Life, Liberty and the pursuit of Happiness. That to secure these rights, Governments are instituted among Men.', difficulty_order: 4},
-  { path: 'founders', title: 'Four Score and Seven Years', author: 'Abraham Lincoln', content: 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.', difficulty_order: 5,
-    work: 'Gettysburg Address', seo_ready: true,
-    seo_title: 'Four Score and Seven Years, Gettysburg Address',
-    seo_description: 'Read and practice recalling the opening line of Lincoln\'s Gettysburg Address using Eduba\'s active recall trainer.',
-    seo_intro: 'Abraham Lincoln delivered the Gettysburg Address on November 19, 1863, at the dedication of a cemetery for soldiers killed in the Battle of Gettysburg. At just over two minutes long, it is one of the most memorized speeches in American history, and this is its opening line.',
-    theme_tags: ['american-history', 'civil-war', 'oratory', 'liberty'] },
-  { path: 'founders', title: 'Foreign Entanglements', author: 'George Washington', content: 'It is our true policy to steer clear of permanent alliances with any portion of the foreign world; so far, I mean, as we are now at liberty to do it.', difficulty_order: 6,
-    work: 'Farewell Address', seo_ready: true,
-    seo_title: 'Foreign Entanglements, Washington\'s Farewell Address',
-    seo_description: 'Read and practice recalling this passage from George Washington\'s Farewell Address using Eduba\'s active recall trainer.',
-    seo_intro: 'Published in 1796 as Washington chose not to seek a third term as president, the Farewell Address offered guidance for the young republic. This line, often paraphrased as a warning against "entangling alliances," shaped American foreign policy debates for well over a century.',
-    theme_tags: ['founding-documents', 'american-history', 'foreign-policy'] },
-  { path: 'founders', title: 'The Tree of Liberty', author: 'Thomas Jefferson', content: 'The tree of liberty must be refreshed from time to time with the blood of patriots and tyrants. It is its natural manure.', difficulty_order: 7,
-    work: 'Letter to William Stephens Smith', seo_ready: true,
-    seo_title: 'The Tree of Liberty by Thomas Jefferson',
-    seo_description: 'Read and practice recalling Thomas Jefferson\'s "tree of liberty" line using Eduba\'s active recall trainer.',
-    seo_intro: 'Jefferson wrote this line in an 1787 letter to William Stephens Smith, responding to news of Shays\' Rebellion. Writing from Paris, he argued that occasional popular uprisings were a healthy, even necessary, feature of a free society — a striking and still-debated claim from one of the Declaration\'s authors.',
-    theme_tags: ['founding-documents', 'liberty', 'american-history'] },
+  { path: 'founders', title: 'Four Score and Seven Years', author: 'Abraham Lincoln', content: 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.', difficulty_order: 5},
+  { path: 'founders', title: 'Foreign Entanglements', author: 'George Washington', content: 'It is our true policy to steer clear of permanent alliances with any portion of the foreign world; so far, I mean, as we are now at liberty to do it.', difficulty_order: 6},
+  { path: 'founders', title: 'The Tree of Liberty', author: 'Thomas Jefferson', content: 'The tree of liberty must be refreshed from time to time with the blood of patriots and tyrants. It is its natural manure.', difficulty_order: 7},
   { path: 'founders', title: 'Ambition Countering Ambition', author: 'James Madison', content: 'Ambition must be made to counteract ambition. The interest of the man must be connected with the constitutional rights of the place.', difficulty_order: 8},
   { path: 'founders', title: 'Honest Abe on Honesty', author: 'Abraham Lincoln', content: 'Stand with anybody who stands right. Stand with him while he is right and part with him when he goes wrong.', difficulty_order: 9},
-  { path: 'founders', title: 'The Way to Wealth', author: 'Benjamin Franklin', content: 'Early to bed and early to rise, makes a man healthy, wealthy and wise. An investment in knowledge pays the best interest. Remember that time is money. He that can have patience, can have what he will. God helps them that help themselves.', difficulty_order: 10,
-    work: 'The Way to Wealth', seo_ready: true,
-    seo_title: 'The Way to Wealth by Benjamin Franklin',
-    seo_description: 'Read and practice recalling maxims from Benjamin Franklin\'s The Way to Wealth using Eduba\'s active recall trainer.',
-    seo_intro: 'Published in 1758 as a preface to Franklin\'s Poor Richard\'s Almanack, The Way to Wealth collects proverbs on thrift, diligence, and patience into a single speech delivered by a fictional old man, "Father Abraham." Many of its lines, including these, became lasting pieces of American folk wisdom.',
-    theme_tags: ['founding-documents', 'wisdom', 'american-history', 'proverbs'] },
+  { path: 'founders', title: 'The Way to Wealth', author: 'Benjamin Franklin', content: 'Early to bed and early to rise, makes a man healthy, wealthy and wise. An investment in knowledge pays the best interest. Remember that time is money. He that can have patience, can have what he will. God helps them that help themselves.', difficulty_order: 10},
   { path: 'founders', title: 'Securing Liberty\'s Blessings', author: 'U.S. Constitution', content: 'We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.', difficulty_order: 11},
   { path: 'founders', title: 'Taxation Without Representation', author: 'Declaration of Independence', content: 'For imposing Taxes on us without our Consent: For depriving us in many cases, of the benefits of Trial by Jury: For transporting us beyond Seas to be tried for pretended offences: For abolishing the free System of English Laws in a neighbouring Province, establishing therein an Arbitrary government, and enlarging its Boundaries so as to render it at once an example and fit instrument for introducing the same absolute rule into these Colonies.', difficulty_order: 12},
   { path: 'founders', title: 'Of the People', author: 'Abraham Lincoln', content: 'But, in a larger sense, we can not dedicate—we can not consecrate—we can not hallow—this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced.', difficulty_order: 13},
@@ -145,61 +83,21 @@ const passages = [
   { path: 'founders', title: 'A House Divided', author: 'Abraham Lincoln', content: 'A house divided against itself cannot stand. I believe this government cannot endure, permanently half slave and half free. I do not expect the Union to be dissolved—I do not expect the house to fall—but I do expect it will cease to be divided. It will become all one thing or all the other. Either the opponents of slavery, will arrest the further spread of it, and place it where the public mind shall rest in the belief that it is in the course of ultimate extinction; or its advocates will push it forward, till it shall become alike lawful in all the States, old as well as new—North as well as South.', difficulty_order: 16},
   { path: 'founders', title: 'Washington\'s Warning', author: 'George Washington', content: 'However political parties may now and then answer popular ends, they are likely in the course of time and things, to become potent engines, by which cunning, ambitious, and unprincipled men will be enabled to subvert the power of the people and to usurp for themselves the reins of government, destroying afterwards the very engines which have lifted them to unjust dominion. Let me now take a more comprehensive view, and warn you in the most solemn manner against the baneful effects of the spirit of party generally. This spirit, unfortunately, is inseparable from our nature, having its root in the strongest passions of the human mind. It exists under different shapes in all governments, more or less stifled, controlled, or repressed; but, in those of the popular form, it is seen in its greatest rankness, and is truly their worst enemy.', difficulty_order: 17},
   { path: 'founders', title: 'Franklin on Virtue', author: 'Benjamin Franklin', content: 'Only a virtuous people are capable of freedom. As nations become more corrupt and vicious, they have more need of masters. When the people find that they can vote themselves money, that will herald the end of the republic. Sell not virtue to purchase wealth, nor Liberty to purchase power. The Constitution only gives people the right to pursue happiness. You have to catch it yourself. Money has never yet made anyone rich. He that is of the opinion money will do everything may well be suspected of doing everything for money. A penny saved is a penny earned. Remember that time is money. Well done is better than well said.', difficulty_order: 18},
-  { path: 'founders', title: 'Malice Toward None', author: 'Abraham Lincoln', content: 'With malice toward none, with charity for all, with firmness in the right as God gives us to see the right, let us strive on to finish the work we are in, to bind up the nation\'s wounds, to care for him who shall have borne the battle and for his widow and his orphan, to do all which may achieve and cherish a just and lasting peace among ourselves and with all nations. Fondly do we hope, fervently do we pray, that this mighty scourge of war may speedily pass away. Yet, if God wills that it continue until all the wealth piled by the bondsman\'s two hundred and fifty years of unrequited toil shall be sunk, and until every drop of blood drawn with the lash shall be paid by another drawn with the sword, as was said three thousand years ago, so still it must be said "the judgments of the Lord are true and righteous altogether."', difficulty_order: 19,
-    work: 'Second Inaugural Address', seo_ready: true,
-    seo_title: 'Malice Toward None, Lincoln\'s Second Inaugural',
-    seo_description: 'Read and practice recalling the closing passage of Lincoln\'s Second Inaugural Address using Eduba\'s active recall trainer.',
-    seo_intro: 'Delivered on March 4, 1865, just weeks before his assassination and as the Civil War neared its end, Lincoln\'s Second Inaugural Address closes with this call for reconciliation. Its phrase "with malice toward none, with charity for all" is inscribed on the Lincoln Memorial.',
-    theme_tags: ['american-history', 'civil-war', 'oratory', 'reconciliation'] },
+  { path: 'founders', title: 'Malice Toward None', author: 'Abraham Lincoln', content: 'With malice toward none, with charity for all, with firmness in the right as God gives us to see the right, let us strive on to finish the work we are in, to bind up the nation\'s wounds, to care for him who shall have borne the battle and for his widow and his orphan, to do all which may achieve and cherish a just and lasting peace among ourselves and with all nations. Fondly do we hope, fervently do we pray, that this mighty scourge of war may speedily pass away. Yet, if God wills that it continue until all the wealth piled by the bondsman\'s two hundred and fifty years of unrequited toil shall be sunk, and until every drop of blood drawn with the lash shall be paid by another drawn with the sword, as was said three thousand years ago, so still it must be said "the judgments of the Lord are true and righteous altogether."', difficulty_order: 19},
   { path: 'founders', title: 'The Declaration\'s Resolve', author: 'Declaration of Independence', content: 'We, therefore, the Representatives of the united States of America, in General Congress, Assembled, appealing to the Supreme Judge of the world for the rectitude of our intentions, do, in the Name, and by Authority of the good People of these Colonies, solemnly publish and declare, That these United Colonies are, and of Right ought to be Free and Independent States; that they are Absolved from all Allegiance to the British Crown, and that all political connection between them and the State of Great Britain, is and ought to be totally dissolved; and that as Free and Independent States, they have full Power to levy War, conclude Peace, contract Alliances, establish Commerce, and to do all other Acts and Things which Independent States may of right do. And for the support of this Declaration, with a firm reliance on the protection of divine Providence, we mutually pledge to each other our Lives, our Fortunes and our sacred Honor.', difficulty_order: 20},
 
   // The Poets Path - 8 sophisticated passages from masters of verse
-  { path: 'poets', title: 'She Walks in Beauty', author: 'Lord Byron', content: 'She walks in beauty, like the night Of cloudless climes and starry skies; And all that\'s best of dark and bright Meet in her aspect and her eyes.', difficulty_order: 1,
-    work: 'Hebrew Melodies', seo_ready: true,
-    seo_title: 'She Walks in Beauty by Lord Byron',
-    seo_description: 'Read and practice recalling Lord Byron\'s "She Walks in Beauty" using Eduba\'s active recall trainer.',
-    seo_intro: 'Byron wrote "She Walks in Beauty" in 1814, reportedly after seeing his cousin by marriage, Anne Wilmot, at a party in a black mourning dress covered in sequins. Published in his 1815 collection Hebrew Melodies, it remains one of the most famous opening stanzas in English Romantic poetry.',
-    theme_tags: ['poetry', 'romanticism', 'beauty'] },
-  { path: 'poets', title: 'Ode to a Nightingale', author: 'John Keats', content: 'My heart aches, and a drowsy numbness pains My sense, as though of hemlock I had drunk, Or emptied some dull opiate to the drains One minute past, and Lethe-wards had sunk.', difficulty_order: 2,
-    work: 'Ode to a Nightingale', seo_ready: true,
-    seo_title: 'Ode to a Nightingale by John Keats',
-    seo_description: 'Read and practice recalling the opening lines of Keats\' "Ode to a Nightingale" using Eduba\'s active recall trainer.',
-    seo_intro: 'John Keats wrote "Ode to a Nightingale" in 1819, reportedly composing much of it in a single morning after hearing a nightingale singing near his home. This opening stanza sets up the poem\'s central tension between the numbing weight of mortal life and the bird\'s seemingly untouched, timeless song.',
-    theme_tags: ['poetry', 'romanticism', 'mortality'] },
-  { path: 'poets', title: 'I Sing the Body Electric', author: 'Walt Whitman', content: 'I sing the body electric, the armies of those I love engirth me and I engirth them. They will not let me off till I go with them, respond to them, and discorrupt them, and charge them full with the charge of the soul.', difficulty_order: 3,
-    work: 'Leaves of Grass', seo_ready: true,
-    seo_title: 'I Sing the Body Electric by Walt Whitman',
-    seo_description: 'Read and practice recalling the opening of Walt Whitman\'s "I Sing the Body Electric" using Eduba\'s active recall trainer.',
-    seo_intro: 'Walt Whitman first published "I Sing the Body Electric" in the 1855 edition of Leaves of Grass, his sprawling, free-verse celebration of the human body and soul as inseparable. This opening line announces the poem\'s project: treating physical, bodily life as itself sacred material for song.',
-    theme_tags: ['poetry', 'american-literature', 'body-and-soul'] },
-  { path: 'poets', title: 'Because I Could Not Stop', author: 'Emily Dickinson', content: 'Because I could not stop for Death, he kindly stopped for me; the carriage held but just ourselves and Immortality. We slowly drove, he knew no haste, and I had put away my labor and my leisure too, for his civility.', difficulty_order: 4,
-    work: 'Because I Could Not Stop for Death', seo_ready: true,
-    seo_title: 'Because I Could Not Stop by Emily Dickinson',
-    seo_description: 'Read and practice recalling Emily Dickinson\'s "Because I Could Not Stop for Death" using Eduba\'s active recall trainer.',
-    seo_intro: 'Emily Dickinson wrote this poem around 1863, though like almost all of her work it wasn\'t published until after her death, appearing in an 1890 collection. It imagines death not as violent or sudden but as a courteous carriage ride — one of the most studied openings in American poetry.',
-    theme_tags: ['poetry', 'american-literature', 'mortality'] },
-  { path: 'poets', title: 'Shall I Compare Thee', author: 'William Shakespeare', content: 'Shall I compare thee to a summer\'s day? Thou art more lovely and more temperate. Rough winds do shake the darling buds of May, and summer\'s lease hath all too short a date. But thy eternal summer shall not fade, nor lose possession of that fair thou ow\'st.', difficulty_order: 5,
-    work: 'Sonnet 18', seo_ready: true,
-    seo_title: 'Sonnet 18 by William Shakespeare',
-    seo_description: 'Read and practice recalling Shakespeare\'s Sonnet 18, "Shall I compare thee to a summer\'s day?", using Eduba\'s active recall trainer.',
-    seo_intro: 'First published in 1609 as part of Shakespeare\'s sonnet sequence, Sonnet 18 is likely the most famous of the 154. It argues that poetry itself can outlast beauty\'s natural decay — the subject\'s "eternal summer" will live on as long as the poem is read.',
-    theme_tags: ['poetry', 'shakespeare', 'sonnets', 'beauty'] },
+  { path: 'poets', title: 'She Walks in Beauty', author: 'Lord Byron', content: 'She walks in beauty, like the night Of cloudless climes and starry skies; And all that\'s best of dark and bright Meet in her aspect and her eyes.', difficulty_order: 1 },
+  { path: 'poets', title: 'Ode to a Nightingale', author: 'John Keats', content: 'My heart aches, and a drowsy numbness pains My sense, as though of hemlock I had drunk, Or emptied some dull opiate to the drains One minute past, and Lethe-wards had sunk.', difficulty_order: 2 },
+  { path: 'poets', title: 'I Sing the Body Electric', author: 'Walt Whitman', content: 'I sing the body electric, the armies of those I love engirth me and I engirth them. They will not let me off till I go with them, respond to them, and discorrupt them, and charge them full with the charge of the soul.', difficulty_order: 3 },
+  { path: 'poets', title: 'Because I Could Not Stop', author: 'Emily Dickinson', content: 'Because I could not stop for Death, he kindly stopped for me; the carriage held but just ourselves and Immortality. We slowly drove, he knew no haste, and I had put away my labor and my leisure too, for his civility.', difficulty_order: 4 },
+  { path: 'poets', title: 'Shall I Compare Thee', author: 'William Shakespeare', content: 'Shall I compare thee to a summer\'s day? Thou art more lovely and more temperate. Rough winds do shake the darling buds of May, and summer\'s lease hath all too short a date. But thy eternal summer shall not fade, nor lose possession of that fair thou ow\'st.', difficulty_order: 5 },
   { path: 'poets', title: 'Tintern Abbey', author: 'William Wordsworth', content: 'And I have felt a presence that disturbs me with the joy of elevated thoughts; a sense sublime of something far more deeply interfused, whose dwelling is the light of setting suns, and the round ocean and the living air, and the blue sky, and in the mind of man.', difficulty_order: 6 },
   { path: 'poets', title: 'When Lilacs Last', author: 'Walt Whitman', content: 'When lilacs last in the dooryard bloom\'d, and the great star early droop\'d in the western sky in the night, I mourn\'d, and yet shall mourn with ever-returning spring. Ever-returning spring, trinity sure to me you bring.', difficulty_order: 7 },
-  { path: 'poets', title: 'Paradise Lost Opening', author: 'John Milton', content: 'Of Man\'s first disobedience, and the fruit Of that forbidden tree whose mortal taste Brought death into the World, and all our woe, With loss of Eden, till one greater Man Restore us, and regain the blissful seat, Sing, Heavenly Muse, that, on the secret top Of Oreb, or of Sinai, didst inspire That shepherd who first taught the chosen seed In the beginning how the heavens and earth Rose out of Chaos.', difficulty_order: 8,
-    work: 'Paradise Lost', seo_ready: true,
-    seo_title: 'Paradise Lost Opening by John Milton',
-    seo_description: 'Read and practice recalling the opening lines of Milton\'s Paradise Lost using Eduba\'s active recall trainer.',
-    seo_intro: 'Published in 1667, Paradise Lost is John Milton\'s epic retelling of the biblical fall of man. Its opening lines follow the classical epic tradition of invoking a muse, here asking for inspiration to tell how humanity\'s disobedience in Eden brought death and suffering into the world.',
-    theme_tags: ['poetry', 'epic', 'religion', 'milton'] },
+  { path: 'poets', title: 'Paradise Lost Opening', author: 'John Milton', content: 'Of Man\'s first disobedience, and the fruit Of that forbidden tree whose mortal taste Brought death into the World, and all our woe, With loss of Eden, till one greater Man Restore us, and regain the blissful seat, Sing, Heavenly Muse, that, on the secret top Of Oreb, or of Sinai, didst inspire That shepherd who first taught the chosen seed In the beginning how the heavens and earth Rose out of Chaos.', difficulty_order: 8 },
 
   // The Philosophers Path - 22 comprehensive passages from the greatest minds
-  { path: 'philosophers', title: 'The Unexamined Life', author: 'Socrates', content: 'The unexamined life is not worth living for a human being. For I do believe that if an unexamined life is not worth living, then the examined life is the path to wisdom. We must question everything, including our most fundamental beliefs, for only through rigorous inquiry can we hope to distinguish truth from mere opinion. The good life is not one of comfort or pleasure, but one of continuous learning, self-reflection, and moral development.', difficulty_order: 1,
-    work: 'Apology (Plato)', seo_ready: true,
-    seo_title: 'The Unexamined Life by Socrates',
-    seo_description: 'Read and practice recalling Socrates\' "the unexamined life is not worth living" using Eduba\'s active recall trainer.',
-    seo_intro: 'Socrates left no writings of his own; this idea comes down to us through Plato\'s Apology, an account of Socrates\' trial in 399 BC. Facing a death sentence, Socrates argues that a life without constant questioning and self-reflection isn\'t worth living — a line that became a founding statement of Western philosophy.',
-    theme_tags: ['philosophy', 'ancient-greece', 'self-reflection', 'wisdom'] },
+  { path: 'philosophers', title: 'The Unexamined Life', author: 'Socrates', content: 'The unexamined life is not worth living for a human being. For I do believe that if an unexamined life is not worth living, then the examined life is the path to wisdom. We must question everything, including our most fundamental beliefs, for only through rigorous inquiry can we hope to distinguish truth from mere opinion. The good life is not one of comfort or pleasure, but one of continuous learning, self-reflection, and moral development.', difficulty_order: 1 },
   { path: 'philosophers', title: 'I Think Therefore I Am', author: 'René Descartes', content: 'I think, therefore I am. This is the first principle of philosophy. I resolved to pretend that all the things that had ever entered my mind were no more true than the illusions of my dreams. But I observed that while I thus wished to think that all was false, it was absolutely necessary that I, who thus thought, should be something; and as I observed that this truth, I think, therefore I am, was so certain and of such evidence that no ground of doubt, however extravagant, could be alleged by the skeptics capable of shaking it.', difficulty_order: 2 },
   { path: 'philosophers', title: 'Self-Reliance', author: 'Ralph Waldo Emerson', content: 'To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.', difficulty_order: 3 },
   { path: 'philosophers', title: 'Civil Disobedience', author: 'Henry David Thoreau', content: 'Under a government which imprisons any unjustly, the true place for a just man is also a prison. Unjust laws exist; shall we be content to obey them, or shall we endeavor to amend them, and obey them until we have succeeded, or shall we transgress them at once? I think that we should be men first, and subjects afterward. It is not desirable to cultivate a respect for the law, so much as for the right.', difficulty_order: 4 },
@@ -242,12 +140,7 @@ const passages = [
 
 
   // The Warriors Path - Strategic wisdom from military and political masters
-  { path: 'warriors', title: 'War as a Matter of Life and Death', author: 'Sun Tzu', content: 'Sun Tzu said: The art of war is of vital importance to the State. It is a matter of life and death, a road either to safety or to ruin.', difficulty_order: 1,
-    work: 'The Art of War', seo_ready: true,
-    seo_title: 'War as a Matter of Life and Death, Sun Tzu',
-    seo_description: 'Read and practice recalling the opening line of Sun Tzu\'s The Art of War using Eduba\'s active recall trainer.',
-    seo_intro: 'Written around the 5th century BC, Sun Tzu\'s The Art of War is one of the oldest and most influential military treatises in the world. This opening line, from Lionel Giles\' 1910 English translation, sets the stakes for everything that follows: for Sun Tzu, war is a matter of state survival, to be studied with total seriousness.',
-    theme_tags: ['strategy', 'warfare', 'ancient-china', 'leadership'] },
+  { path: 'warriors', title: 'War as a Matter of Life and Death', author: 'Sun Tzu', content: 'Sun Tzu said: The art of war is of vital importance to the State. It is a matter of life and death, a road either to safety or to ruin.', difficulty_order: 1 },
   { path: 'warriors', title: 'On Deception', author: 'Sun Tzu', content: 'All warfare is based on deception. Hence, when able to attack, we must seem unable; when using our forces, we must seem inactive.', difficulty_order: 2 },
   { path: 'warriors', title: 'Injuries and Benefits', author: 'Niccolò Machiavelli', content: 'For injuries ought to be done all at one time, so that, being tasted less, they offend less; benefits ought to be given little by little, so that the flavour of them may last longer.', difficulty_order: 3 },
   { path: 'warriors', title: 'Gaul Divided', author: 'Julius Caesar', content: 'All Gaul is divided into three parts, one of which the Belgae inhabit, the Aquitani another, those who in their own language are called Celts, in our Gauls, the third.', difficulty_order: 4 },
@@ -276,12 +169,7 @@ const passages = [
   // The Orators Path - 42 passages from great historical speeches
   { path: 'orators', title: 'Blood, Toil, Tears and Sweat', author: 'Winston Churchill', content: 'I would say to the House, as I said to those who have joined this government: I have nothing to offer but blood, toil, tears and sweat. We have before us an ordeal of the most grievous kind.', difficulty_order: 1 },
   { path: 'orators', title: 'The Only Thing We Have to Fear', author: 'Franklin D. Roosevelt', content: 'The only thing we have to fear is fear itself—nameless, unreasoning, unjustified terror.', difficulty_order: 2 },
-  { path: 'orators', title: 'Give Me Liberty or Give Me Death', author: 'Patrick Henry', content: 'Is life so dear, or peace so sweet, as to be purchased at the price of chains and slavery? Forbid it, Almighty God! I know not what course others may take; but as for me, give me liberty or give me death!', difficulty_order: 3,
-    work: 'Speech to the Second Virginia Convention', seo_ready: true,
-    seo_title: 'Give Me Liberty or Give Me Death, Patrick Henry',
-    seo_description: 'Read and practice recalling the closing line of Patrick Henry\'s "Give Me Liberty or Give Me Death" speech using Eduba\'s active recall trainer.',
-    seo_intro: 'Patrick Henry delivered this speech on March 23, 1775, to the Second Virginia Convention, arguing for Virginia to arm its militia against Britain. Its famous closing line became a rallying cry of the American Revolution, though the exact wording was reconstructed decades later from listeners\' memories.',
-    theme_tags: ['american-history', 'revolution', 'oratory', 'liberty'] },
+  { path: 'orators', title: 'Give Me Liberty or Give Me Death', author: 'Patrick Henry', content: 'Is life so dear, or peace so sweet, as to be purchased at the price of chains and slavery? Forbid it, Almighty God! I know not what course others may take; but as for me, give me liberty or give me death!', difficulty_order: 3 },
   { path: 'orators', title: 'A Date Which Will Live in Infamy', author: 'Franklin D. Roosevelt', content: 'Yesterday, December 7, 1941—a date which will live in infamy—the United States of America was suddenly and deliberately attacked by naval and air forces of the Empire of Japan.', difficulty_order: 4 },
   { path: 'orators', title: 'I Have a Dream', author: 'Martin Luther King Jr.', content: 'I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character.', difficulty_order: 5 },
   { path: 'orators', title: 'Victory at All Costs', author: 'Winston Churchill', content: 'You ask, what is our aim? I can answer in one word: It is victory, victory at all costs, victory in spite of all terror, victory, however long and hard the road may be.', difficulty_order: 6 },
@@ -327,74 +215,54 @@ async function populateDatabase() {
   console.log('🚀 Starting database population...');
 
   try {
-    // Compute a stable slug for every passage (dedup on collision), then
-    // upsert by slug so existing rows keep their id (and linked
-    // user_progress) instead of being deleted and recreated.
-    const seenSlugs = new Set();
-    const passagesWithSlugs = passages.map((p) => {
-      let slug = passageSlug(p.author, p.title);
-      let suffix = 2;
-      while (seenSlugs.has(slug)) {
-        slug = `${passageSlug(p.author, p.title)}-${suffix}`;
-        suffix++;
-      }
-      seenSlugs.add(slug);
-      // Explicit booleans on every row: PostgREST builds one bulk statement
-      // from the union of keys across all rows, so a row missing a key gets
-      // an explicit NULL for that column rather than falling back to the
-      // column's DB default — these are NOT NULL columns, so they must
-      // always be present.
-      return { ...p, slug, seo_ready: p.seo_ready ?? false, featured: p.featured ?? false };
-    });
+    // First, check if there are any existing passages
+    const { count, error: countError } = await supabase
+      .from('passages')
+      .select('*', { count: 'exact', head: true });
 
-    console.log(`📝 Upserting ${passagesWithSlugs.length} passages (matched by slug)...`);
+    if (countError) {
+      console.error('❌ Error checking existing data:', countError);
+      return;
+    }
+
+    console.log(`📊 Found ${count} existing passages`);
+
+    if (count > 0) {
+      console.log('⚠️  Database already has data. Clearing first...');
+      const { error: deleteError } = await supabase
+        .from('passages')
+        .delete()
+        .neq('id', '00000000-0000-0000-0000-000000000000'); // Delete all
+
+      if (deleteError) {
+        console.error('❌ Error clearing data:', deleteError);
+        return;
+      }
+      console.log('✅ Cleared existing data');
+    }
+
+    // Insert all passages
+    console.log(`📝 Inserting ${passages.length} passages...`);
 
     const { data, error } = await supabase
       .from('passages')
-      .upsert(passagesWithSlugs, { onConflict: 'slug' })
+      .insert(passages)
       .select();
 
     if (error) {
-      console.error('❌ Error upserting passages:', error);
+      console.error('❌ Error inserting passages:', error);
       return;
     }
 
-    console.log(`✅ Successfully upserted ${data.length} passages!`);
+    console.log(`✅ Successfully inserted ${data.length} passages!`);
 
-    // Reconciliation: remove only passages whose slug is no longer present
-    // in this file (i.e. content actually deleted from populate-db.js) —
-    // never a wholesale wipe.
-    const currentSlugs = passagesWithSlugs.map((p) => p.slug);
-    const { data: removed, error: reconcileError } = await supabase
-      .from('passages')
-      .delete()
-      .not('slug', 'in', `(${currentSlugs.map((s) => `"${s}"`).join(',')})`)
-      .select('id, title');
+    // Verify by counting passages in each path
+    for (const path of ['stoics', 'founders', 'poets', 'orators', 'philosophers', 'novelists', 'scientists', 'warriors']) {
+      const { count } = await supabase
+        .from('passages')
+        .select('*', { count: 'exact', head: true })
+        .eq('path', path);
 
-    if (reconcileError) {
-      console.error('❌ Error reconciling removed passages:', reconcileError);
-      return;
-    }
-
-    if (removed && removed.length > 0) {
-      console.log(`🗑️  Removed ${removed.length} passage(s) no longer in populate-db.js:`, removed.map((r) => r.title));
-    } else {
-      console.log('🗑️  No passages to remove — content is in sync.');
-    }
-
-    // Verify by counting passages in each path (independent queries, run in parallel)
-    const pathCounts = await Promise.all(
-      ['stoics', 'founders', 'poets', 'orators', 'philosophers', 'novelists', 'scientists', 'warriors'].map(
-        async (path) => {
-          const { count } = await supabase
-            .from('passages')
-            .select('*', { count: 'exact', head: true })
-            .eq('path', path);
-          return { path, count };
-        }
-      )
-    );
-    for (const { path, count } of pathCounts) {
       console.log(`📚 ${path}: ${count} passages`);
     }
 

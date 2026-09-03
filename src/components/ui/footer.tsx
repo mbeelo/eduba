@@ -46,6 +46,12 @@ export function Footer() {
                   Authors
                 </Link>
                 <Link
+                  href="/collections"
+                  className="block label-mono text-xs opacity-60 hover:opacity-100 transition-opacity"
+                >
+                  Collections
+                </Link>
+                <Link
                   href="/about"
                   className="block label-mono text-xs opacity-60 hover:opacity-100 transition-opacity"
                 >

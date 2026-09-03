@@ -2,6 +2,7 @@
 
 import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { useAuth } from '@/lib/auth';
 import { useTheme } from '@/lib/theme';
 import { getPathProgress, getPathMetadata, PathWithPassages, getNextUnlockedPassage } from '@/lib/progress';
@@ -155,11 +156,11 @@ export default function PathDetailPage() {
       <div className="min-h-screen" style={{ background: 'var(--background)' }}>
         <header className="bg-white clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }}>
           <Container className="flex h-16 items-center justify-between">
-            <div className="flex items-center">
+            <Link href="/" className="flex items-center">
               <span className="text-lg" style={{ color: 'var(--accent)' }}>
                 eduba
               </span>
-            </div>
+            </Link>
             <button className="button-subtle text-xs sm:text-sm" onClick={handleBackToDashboard}>
               dashboard
             </button>
@@ -188,11 +189,11 @@ export default function PathDetailPage() {
       <div className="min-h-screen" style={{ background: 'var(--background)' }}>
         <header className="bg-white clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }}>
           <Container className="flex h-16 items-center justify-between">
-            <div className="flex items-center">
+            <Link href="/" className="flex items-center">
               <span className="text-lg" style={{ color: 'var(--accent)' }}>
                 eduba
               </span>
-            </div>
+            </Link>
             <button className="button-subtle text-xs sm:text-sm" onClick={handleBackToDashboard}>
               dashboard
             </button>
@@ -241,11 +242,11 @@ export default function PathDetailPage() {
       {/* Header */}
       <header className="bg-white clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }}>
         <Container className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <span className="text-lg" style={{ color: 'var(--accent)' }}>
               eduba
             </span>
-          </div>
+          </Link>
 
           <div className="flex items-center gap-4">
             <button className="button-subtle text-lg" onClick={() => {

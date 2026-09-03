@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "student tools",
     "memory techniques"
   ],
-  authors: [{ name: "Eduba", url: "https://eduba.app" }],
+  authors: [{ name: "Eduba", url: "https://eduba.co" }],
   creator: "Eduba",
   publisher: "Eduba",
   formatDetection: {
@@ -158,6 +158,17 @@ export default function RootLayout({
                 "@type": "Organization",
                 "name": "Eduba"
               }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Eduba",
+              "url": "https://eduba.co"
             })
           }}
         />

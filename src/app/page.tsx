@@ -9,6 +9,24 @@ import {
   Section,
 } from '@/components/ui';
 
+// Collections with seo_ready content and a live /collections/[slug] page.
+// Keep in sync with getDistinctSeoCollections() in src/lib/seo-content.ts —
+// update when scientists/novelists get seo_ready passages. Hardcoded (not a
+// live query) because this stays a client-rendered marketing page.
+const SEO_READY_COLLECTIONS = new Set(['stoics', 'founders', 'poets', 'philosophers', 'orators', 'warriors']);
+
+function SeoCollectionLink({ collection }: { collection: string }) {
+  if (!SEO_READY_COLLECTIONS.has(collection)) return null;
+  return (
+    <Link
+      href={`/collections/${collection}`}
+      className="label-mono text-[10px] opacity-50 hover:opacity-80 transition-opacity relative z-10 mt-2 block"
+    >
+      Read the passages →
+    </Link>
+  );
+}
+
 export default function Home() {
   const { theme, toggleTheme } = useTheme();
 
@@ -26,11 +44,11 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }} role="banner">
         <Container className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <span className="text-lg" style={{ color: 'var(--accent)' }}>
               eduba
             </span>
-          </div>
+          </Link>
 
           <div className="flex items-center gap-4">
             <button
@@ -198,202 +216,200 @@ export default function Home() {
               <div className="clean-card p-6 sm:p-8" style={{ background: 'var(--background)' }}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
-                  <Link href="/path/founders">
-                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
-                      <div className="mb-4">
-                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
-                          The Founders
-                        </Heading>
+                  <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:min-h-72 relative cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <Link href="/path/founders" className="absolute inset-0 z-0" aria-label="Start The Founders" />
+                    <div className="mb-4">
+                      <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                        The Founders
+                      </Heading>
+                    </div>
+                    <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                      Founding documents and speeches of American democracy
+                    </BodyText>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                      <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                    </div>
+                    <div className="flex justify-between items-end mt-auto">
+                      <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                        Start →
                       </div>
-                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
-                        Founding documents and speeches of American democracy
-                      </BodyText>
-                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
-                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
-                      </div>
-                      <div className="flex justify-between items-end mt-auto">
-                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
-                          Start →
-                        </div>
-                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
-                          0/20 (0%)
-                        </div>
+                      <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                        0/20 (0%)
                       </div>
                     </div>
-                  </Link>
+                    <SeoCollectionLink collection="founders" />
+                  </div>
 
-                  <Link href="/path/stoics">
-                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
-                      <div className="mb-4">
-                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
-                          The Stoics
-                        </Heading>
+                  <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:min-h-72 relative cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <Link href="/path/stoics" className="absolute inset-0 z-0" aria-label="Start The Stoics" />
+                    <div className="mb-4">
+                      <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                        The Stoics
+                      </Heading>
+                    </div>
+                    <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                      Marcus Aurelius, Seneca, Epictetus
+                    </BodyText>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                      <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                    </div>
+                    <div className="flex justify-between items-end mt-auto">
+                      <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                        Start →
                       </div>
-                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
-                        Marcus Aurelius, Seneca, Epictetus
-                      </BodyText>
-                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
-                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
-                      </div>
-                      <div className="flex justify-between items-end mt-auto">
-                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
-                          Start →
-                        </div>
-                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
-                          0/25 (0%)
-                        </div>
+                      <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                        0/25 (0%)
                       </div>
                     </div>
-                  </Link>
+                    <SeoCollectionLink collection="stoics" />
+                  </div>
 
-                  <Link href="/path/poets">
-                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
-                      <div className="mb-4">
-                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
-                          The Poets
-                        </Heading>
+                  <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:min-h-72 relative cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <Link href="/path/poets" className="absolute inset-0 z-0" aria-label="Start The Poets" />
+                    <div className="mb-4">
+                      <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                        The Poets
+                      </Heading>
+                    </div>
+                    <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                      Shakespeare, Dickinson, Frost, Keats
+                    </BodyText>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                      <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                    </div>
+                    <div className="flex justify-between items-end mt-auto">
+                      <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                        Start →
                       </div>
-                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
-                        Shakespeare, Dickinson, Frost, Keats
-                      </BodyText>
-                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
-                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
-                      </div>
-                      <div className="flex justify-between items-end mt-auto">
-                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
-                          Start →
-                        </div>
-                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
-                          0/8 (0%)
-                        </div>
+                      <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                        0/8 (0%)
                       </div>
                     </div>
-                  </Link>
+                    <SeoCollectionLink collection="poets" />
+                  </div>
 
-                  <Link href="/path/philosophers">
-                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
-                      <div className="mb-4">
-                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
-                          The Philosophers
-                        </Heading>
+                  <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:min-h-72 relative cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <Link href="/path/philosophers" className="absolute inset-0 z-0" aria-label="Start The Philosophers" />
+                    <div className="mb-4">
+                      <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                        The Philosophers
+                      </Heading>
+                    </div>
+                    <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                      Socrates, Nietzsche, Kant, Sartre
+                    </BodyText>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                      <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                    </div>
+                    <div className="flex justify-between items-end mt-auto">
+                      <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                        Start →
                       </div>
-                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
-                        Socrates, Nietzsche, Kant, Sartre
-                      </BodyText>
-                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
-                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
-                      </div>
-                      <div className="flex justify-between items-end mt-auto">
-                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
-                          Start →
-                        </div>
-                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
-                          0/22 (0%)
-                        </div>
+                      <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                        0/22 (0%)
                       </div>
                     </div>
-                  </Link>
+                    <SeoCollectionLink collection="philosophers" />
+                  </div>
 
-                  <Link href="/path/scientists">
-                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
-                      <div className="mb-4">
-                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
-                          The Scientists
-                        </Heading>
+                  <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:min-h-72 relative cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <Link href="/path/scientists" className="absolute inset-0 z-0" aria-label="Start The Scientists" />
+                    <div className="mb-4">
+                      <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                        The Scientists
+                      </Heading>
+                    </div>
+                    <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                      Darwin, Newton, Galileo, Curie
+                    </BodyText>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                      <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                    </div>
+                    <div className="flex justify-between items-end mt-auto">
+                      <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                        Start →
                       </div>
-                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
-                        Darwin, Newton, Galileo, Curie
-                      </BodyText>
-                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
-                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
-                      </div>
-                      <div className="flex justify-between items-end mt-auto">
-                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
-                          Start →
-                        </div>
-                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
-                          0/8 (0%)
-                        </div>
+                      <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                        0/8 (0%)
                       </div>
                     </div>
-                  </Link>
+                  </div>
 
-                  <Link href="/path/orators">
-                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
-                      <div className="mb-4">
-                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
-                          The Orators
-                        </Heading>
+                  <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:min-h-72 relative cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <Link href="/path/orators" className="absolute inset-0 z-0" aria-label="Start The Orators" />
+                    <div className="mb-4">
+                      <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                        The Orators
+                      </Heading>
+                    </div>
+                    <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                      Churchill, Roosevelt, MLK, JFK
+                    </BodyText>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                      <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                    </div>
+                    <div className="flex justify-between items-end mt-auto">
+                      <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                        Start →
                       </div>
-                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
-                        Churchill, Roosevelt, MLK, JFK
-                      </BodyText>
-                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
-                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
-                      </div>
-                      <div className="flex justify-between items-end mt-auto">
-                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
-                          Start →
-                        </div>
-                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
-                          0/42 (0%)
-                        </div>
+                      <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                        0/42 (0%)
                       </div>
                     </div>
-                  </Link>
+                    <SeoCollectionLink collection="orators" />
+                  </div>
 
-                  <Link href="/path/warriors">
-                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
-                      <div className="mb-4">
-                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
-                          The Warriors
-                        </Heading>
+                  <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:min-h-72 relative cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <Link href="/path/warriors" className="absolute inset-0 z-0" aria-label="Start The Warriors" />
+                    <div className="mb-4">
+                      <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                        The Warriors
+                      </Heading>
+                    </div>
+                    <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                      Sun Tzu, Machiavelli, Caesar, Thucydides
+                    </BodyText>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                      <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                    </div>
+                    <div className="flex justify-between items-end mt-auto">
+                      <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                        Start →
                       </div>
-                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
-                        Sun Tzu, Machiavelli, Caesar, Thucydides
-                      </BodyText>
-                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
-                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
-                      </div>
-                      <div className="flex justify-between items-end mt-auto">
-                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
-                          Start →
-                        </div>
-                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
-                          0/25 (0%)
-                        </div>
+                      <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                        0/25 (0%)
                       </div>
                     </div>
-                  </Link>
+                    <SeoCollectionLink collection="warriors" />
+                  </div>
 
-                  <Link href="/path/novelists">
-                    <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:h-72 cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
-                      <div className="mb-4">
-                        <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
-                          The Novelists
-                        </Heading>
+                  <div className="clean-card p-4 sm:p-6 flex flex-col min-h-64 sm:min-h-72 relative cursor-pointer hover:opacity-90 transition-opacity" style={{ background: 'var(--background-soft)' }}>
+                    <Link href="/path/novelists" className="absolute inset-0 z-0" aria-label="Start The Novelists" />
+                    <div className="mb-4">
+                      <Heading level={3} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>
+                        The Novelists
+                      </Heading>
+                    </div>
+                    <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
+                      Dickens, Melville, Dostoevsky, Tolstoy
+                    </BodyText>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
+                      <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
+                    </div>
+                    <div className="flex justify-between items-end mt-auto">
+                      <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                        Start →
                       </div>
-                      <BodyText className="text-sm mb-4 opacity-70 flex-grow" style={{ color: 'var(--foreground)' }}>
-                        Dickens, Melville, Dostoevsky, Tolstoy
-                      </BodyText>
-                      <div className="w-full bg-gray-200 rounded-full h-2 mb-4" style={{ backgroundColor: 'var(--border)' }}>
-                        <div className="bg-accent h-2 rounded-full" style={{ backgroundColor: 'var(--accent)', width: '0%' }}></div>
-                      </div>
-                      <div className="flex justify-between items-end mt-auto">
-                        <div className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
-                          Start →
-                        </div>
-                        <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
-                          0/6 (0%)
-                        </div>
+                      <div className="text-sm font-medium whitespace-nowrap" style={{ color: 'var(--accent)' }}>
+                        0/6 (0%)
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 </div>
 
                 <div className="text-center mt-6 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
                   <BodyText className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>
-                    9 paths • 236 passages • 15–250 words
+                    8 paths • 156 passages • 15–250 words
                   </BodyText>
                 </div>
               </div>

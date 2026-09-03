@@ -12,11 +12,11 @@ export default function TermsPage() {
       {/* Header */}
       <header className="bg-white clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }}>
         <Container className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <span className="text-lg" style={{ color: 'var(--accent)' }}>
               eduba
             </span>
-          </div>
+          </Link>
 
           <div className="flex items-center gap-4">
             <button className="button-subtle text-lg" onClick={toggleTheme}>

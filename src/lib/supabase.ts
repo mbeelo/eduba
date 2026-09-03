@@ -18,6 +18,14 @@ export type Database = {
           content: string
           difficulty_order: number
           created_at: string
+          slug: string | null
+          work: string | null
+          seo_title: string | null
+          seo_description: string | null
+          seo_intro: string | null
+          theme_tags: string[] | null
+          seo_ready: boolean
+          featured: boolean
         }
         Insert: {
           id?: string
@@ -27,6 +35,14 @@ export type Database = {
           content: string
           difficulty_order: number
           created_at?: string
+          slug?: string | null
+          work?: string | null
+          seo_title?: string | null
+          seo_description?: string | null
+          seo_intro?: string | null
+          theme_tags?: string[] | null
+          seo_ready?: boolean
+          featured?: boolean
         }
         Update: {
           id?: string
@@ -36,6 +52,14 @@ export type Database = {
           content?: string
           difficulty_order?: number
           created_at?: string
+          slug?: string | null
+          work?: string | null
+          seo_title?: string | null
+          seo_description?: string | null
+          seo_intro?: string | null
+          theme_tags?: string[] | null
+          seo_ready?: boolean
+          featured?: boolean
         }
       }
       user_progress: {

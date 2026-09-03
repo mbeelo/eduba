@@ -49,8 +49,9 @@ The app supports both authenticated and anonymous users with different progress 
 - **Migration System**: Anonymous progress can be migrated to authenticated accounts
 
 #### Content Management
-- **Master Content**: `populate-db.js` contains all passages (236 total across 9 learning paths)
-- **Learning Paths**: stoics, founders, poets, philosophers, orators, novelists, scientists, scriptures, warriors
+- **Master Content**: `populate-db.js` contains all passages (156 total across 8 learning paths)
+- **Learning Paths**: stoics, founders, poets, philosophers, orators, novelists, scientists, warriors
+- **SEO Content**: a subset of passages (currently 20) are flagged `seo_ready` and get public, indexable pages at `/passages/[slug]`, `/authors/[slug]`, `/works/[slug]`, `/collections/[slug]` — see `src/lib/seo-content.ts`
 - **Progressive Difficulty**: Passages ordered by difficulty within each path
 
 #### Text Comparison Engine
@@ -130,6 +131,6 @@ Advanced word-by-word comparison system in `src/lib/comparison.ts`:
 - Responsive design with mobile-first approach
 
 ### Database Operations
-- Use `populate-db.js` for content updates (clears and replaces all passages)
-- Progress data persists across content updates
+- Use `populate-db.js` for content updates. It upserts by `slug` (a stable identity derived from author+title, see `src/lib/slug.ts`) rather than deleting and reinserting — existing passages keep their `id` and any linked `user_progress` rows. Only passages whose slug is no longer present in the file get deleted (reconciliation step)
+- Progress data persists across content updates (this is now guaranteed by the upsert behavior above, not incidental)
 - Test database changes in development environment first

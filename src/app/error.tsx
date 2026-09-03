@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Link from 'next/link';
 import { Container, Heading, BodyText } from '@/components/ui';
 
 interface ErrorProps {
@@ -19,11 +20,11 @@ export default function Error({ error, reset }: ErrorProps) {
       {/* Header */}
       <header className="bg-white clean-card" style={{ borderRadius: 0, marginBottom: '2rem' }}>
         <Container className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <span className="text-lg" style={{ color: 'var(--accent)' }}>
               eduba
             </span>
-          </div>
+          </Link>
 
           <div className="flex items-center gap-4">
             <a href="/dashboard" className="button-subtle text-xs sm:text-sm">
