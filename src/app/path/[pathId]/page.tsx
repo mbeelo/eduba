@@ -23,8 +23,7 @@ import {
   LoadingCard,
 } from '@/components/ui';
 import { Footer } from '@/components/ui/footer';
-// TODO: Uncomment when AdSense is approved
-// import { AdBanner } from '@/components/ui/ad-banner';
+import { AdBanner } from '@/components/ui/ad-banner';
 
 export default function PathDetailPage() {
   const params = useParams();
@@ -343,8 +342,11 @@ export default function PathDetailPage() {
               </div>
             </div>
 
-            {/* TODO: Uncomment when AdSense is approved */}
-            {/* <AdBanner className="mb-8" /> */}
+            <AdBanner
+              className="mb-8"
+              adSlot={process.env.NEXT_PUBLIC_ADSENSE_DASHBOARD_SLOT || "1234567890"}
+              adFormat="rectangle"
+            />
 
             {/* Passages List */}
             <div className="space-y-6">

@@ -10,8 +10,7 @@ import { Container, Section } from '@/components/ui/layout';
 import { BodyText, Heading } from '@/components/ui/typography';
 import { Button } from '@/components/ui/button';
 import { Footer } from '@/components/ui/footer';
-// TODO: Uncomment when AdSense is approved
-// import { AdBanner } from '@/components/ui/ad-banner';
+import { AdBanner } from '@/components/ui/ad-banner';
 
 interface UserStats {
   totalPassages: number;
@@ -193,8 +192,11 @@ export default function AccountPage() {
                 </BodyText>
               </div>
 
-              {/* TODO: Uncomment when AdSense is approved */}
-              {/* <AdBanner className="mb-8" /> */}
+              <AdBanner
+                className="mb-8"
+                adSlot={process.env.NEXT_PUBLIC_ADSENSE_DASHBOARD_SLOT || "1234567890"}
+                adFormat="rectangle"
+              />
 
               {/* Profile Info */}
               <div className="clean-card">
