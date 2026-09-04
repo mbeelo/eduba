@@ -6,6 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Masters Worth Copying',
   description: 'Discover the authors whose works ancient scribes preserved through careful copying. Learn why these minds deserve the deep attention of traditional scribe training.',
+  alternates: { canonical: '/authors' },
   openGraph: {
     title: 'Masters Worth Copying | Eduba',
     description: 'Discover the authors whose works ancient scribes preserved through careful copying. Learn why these minds deserve the deep attention of traditional scribe training.',

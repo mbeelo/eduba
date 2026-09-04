@@ -6,6 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Benefits of Traditional Scribe Training',
   description: 'Discover how traditional scribe training improves academic performance, enhances cognitive function, and builds cultural literacy through centuries-proven methods.',
+  alternates: { canonical: '/benefits' },
   openGraph: {
     title: 'Benefits of Traditional Scribe Training | Eduba',
     description: 'Discover how traditional scribe training improves academic performance, enhances cognitive function, and builds cultural literacy through centuries-proven methods.',

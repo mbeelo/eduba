@@ -6,6 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Traditional Scribe Training',
   description: 'Learn the ancient method that scribes, scholars, and students have used for centuries: read, write from memory, and learn from differences.',
+  alternates: { canonical: '/techniques' },
   openGraph: {
     title: 'Traditional Scribe Training | Eduba',
     description: 'Learn the ancient method that scribes, scholars, and students have used for centuries: read, write from memory, and learn from differences.',
