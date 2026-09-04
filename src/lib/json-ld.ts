@@ -1,6 +1,6 @@
 import { isPersonAuthor, type SeoPassage } from './seo-content'
 
-const SITE_URL = 'https://eduba.co'
+const SITE_URL = 'https://www.eduba.co'
 
 export interface BreadcrumbItem {
   name: string

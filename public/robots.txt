@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://eduba.co/sitemap.xml
+Sitemap: https://www.eduba.co/sitemap.xml
 
 # Block AI crawlers from training on content
 User-agent: GPTBot

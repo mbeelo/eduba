@@ -7,7 +7,7 @@ import {
 } from '@/lib/seo-content'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://eduba.co'
+  const baseUrl = 'https://www.eduba.co'
 
   // Static pages
   const staticPages = [

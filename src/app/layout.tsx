@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "student tools",
     "memory techniques"
   ],
-  authors: [{ name: "Eduba", url: "https://eduba.co" }],
+  authors: [{ name: "Eduba", url: "https://www.eduba.co" }],
   creator: "Eduba",
   publisher: "Eduba",
   formatDetection: {
@@ -56,14 +56,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://eduba.co'),
+  metadataBase: new URL('https://www.eduba.co'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://eduba.co',
+    url: 'https://www.eduba.co',
     title: 'Eduba - Most tools help you read more. Eduba helps you remember.',
     description: 'Most tools help you read more. Eduba helps you remember. Train recall on passages from history\'s greatest minds using the traditional scribe method.',
     siteName: 'Eduba',
@@ -138,7 +138,7 @@ export default function RootLayout({
               "@type": "EducationalOrganization",
               "name": "Eduba",
               "description": "Most tools help you read more. Eduba helps you remember. Train recall on passages from history's greatest minds using the traditional scribe method.",
-              "url": "https://eduba.co",
+              "url": "https://www.eduba.co",
               "applicationCategory": "EducationApplication",
               "operatingSystem": "Web",
               "offers": {
@@ -168,7 +168,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Eduba",
-              "url": "https://eduba.co"
+              "url": "https://www.eduba.co"
             })
           }}
         />
